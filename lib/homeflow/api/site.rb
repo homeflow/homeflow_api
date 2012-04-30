@@ -2,7 +2,7 @@ module Homeflow
   module API
    class Site < Resource
 
-    is_resource :site
+    is_resource :sites
 
    end
  end
