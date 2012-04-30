@@ -25,6 +25,7 @@ require current_dir + "/api/user"
 require current_dir + "/api/session"
 require current_dir + "/api/lead"
 require current_dir + "/api/portal"
+require current_dir + "/api/site"
 
 
 require current_dir + "/api/response"
