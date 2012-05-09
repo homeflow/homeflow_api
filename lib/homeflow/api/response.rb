@@ -31,6 +31,8 @@ module Homeflow
       "portal" => Homeflow::API::Portal,
       'user' => Homeflow::API::User,
       "lead" => Homeflow::API::Lead,
+      "postcodes" => Homeflow::API::Postcode,
+      "postcode" => Homeflow::API::Postcode,
       "alternative_places" => {
         "locations" => Homeflow::API::Location,
         "counties" => Homeflow::API::County
