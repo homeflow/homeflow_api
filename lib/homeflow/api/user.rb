@@ -4,8 +4,8 @@ module Homeflow
 
     is_resource :users
 
-    def self.find(id, session_id)
-      Request.run_for(Homeflow::API::ResourceIdentifier.new("/#{resource_uri}/#{id}", :session_id => session_id))
+    def self.find(id, session_id, agency_id=nil)
+      Request.run_for(Homeflow::API::ResourceIdentifier.new("/#{resource_uri}/#{id}", :session_id => session_id, :agency_id => agency_id))
     end
 
     def self.create(params)
