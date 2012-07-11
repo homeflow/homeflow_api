@@ -1,8 +1,8 @@
 module Homeflow
   module API
-    class Notification < Resource
+    class Message < Resource
 
-      is_resource :notifications
+      is_resource :messages
 
       def self.create(params)
         Request.run_for(Homeflow::API::Post.new("/#{resource_uri}/", {}, params))
