@@ -30,6 +30,7 @@ module Homeflow
       "session" => Homeflow::API::Session,
       "portal" => Homeflow::API::Portal,
       'user' => Homeflow::API::User,
+      'notification' => Homeflow::API::Notification,
       "lead" => Homeflow::API::Lead,
       "postcodes" => Homeflow::API::Postcode,
       "postcode" => Homeflow::API::Postcode,
