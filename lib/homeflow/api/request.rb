@@ -1,5 +1,6 @@
 module Homeflow
   module API
+   YAML::ENGINE.yamler = "syck"
    class Request
 
     attr_accessor :resource_class, :request_specification
