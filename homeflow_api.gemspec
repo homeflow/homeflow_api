@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "example.rb",
     "homeflow_api.gemspec",
     "lib/homeflow/api.rb",
     "lib/homeflow/api/agency.rb",
