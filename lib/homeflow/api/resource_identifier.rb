@@ -11,7 +11,7 @@ module Homeflow
     end
 
     def to_params
-      @params
+      @params.merge(@params) { |name, values| values.is_a?(Array) ? values.join(',') : values }
     end
 
    end
