@@ -9,7 +9,7 @@ group :development do
   gem "rcov", ">= 0"
 end
 
-gem "hashie", "1.1"
+gem "hashie", "~> 1.1"
 gem "json"
 gem "httparty"
 
