@@ -32,7 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.0.0)
-  hashie (= 1.1)
+  hashie (~> 1.1)
   httparty
   jeweler (~> 1.6.4)
   json
