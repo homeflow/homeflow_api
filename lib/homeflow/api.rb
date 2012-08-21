@@ -30,6 +30,8 @@ require current_dir + "/api/site"
 require current_dir + '/api/site_page'
 require current_dir + '/api/message'
 require current_dir + "/api/response"
+require current_dir + "/api/favourite_property"
+
 
 module Homeflow
   module API
