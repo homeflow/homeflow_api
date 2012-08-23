@@ -9,8 +9,8 @@ module Homeflow
           @resource_uri = uri.to_s
         end
 
-        def find(id)
-          Request.run_for(Homeflow::API::ResourceIdentifier.new("/#{resource_uri}/#{id}"))
+        def find(id, params = {})
+          Request.run_for(Homeflow::API::ResourceIdentifier.new("/#{resource_uri}/#{id}", params))
         end
 
         def resource_uri
