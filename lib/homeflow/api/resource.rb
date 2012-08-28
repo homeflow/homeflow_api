@@ -13,6 +13,10 @@ module Homeflow
           Request.run_for(Homeflow::API::ResourceIdentifier.new("/#{resource_uri}/#{id}", params))
         end
 
+        def delete(id, params = {})
+         Request.run_for(Homeflow::API::Delete.new("/#{resource_uri}/#{id}", params))
+        end
+
         def resource_uri
           @resource_uri
         end
