@@ -8,6 +8,10 @@ module Homeflow
     	Request.run_for(Homeflow::API::ResourceIdentifier.new("/sites/#{site_id}/pages/#{key}"))
     end
 
+    def self.find_by_site_id(site_id)
+    	Request.run_for(Homeflow::API::ResourceIdentifier.new("/sites/#{site_id}/pages"))
+    end
+
    end
  end
 end
