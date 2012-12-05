@@ -35,6 +35,7 @@ module Homeflow
       "postcodes" => Homeflow::API::Postcode,
       "postcode" => Homeflow::API::Postcode,
       "site_page" => Homeflow::API::SitePage,
+      "site_pags" => Homeflow::API::SitePage,
       "alternative_places" => {
         "locations" => Homeflow::API::Location,
         "counties" => Homeflow::API::County
