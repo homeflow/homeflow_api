@@ -17,6 +17,7 @@ module Homeflow
 
 
     COLLECTIONS_OBJECTS = {
+      "password_reset" => Homeflow::API::PasswordReset,
       "properties" => Homeflow::API::Property,
       "search" => Homeflow::API::Search,
       "property" => Homeflow::API::Property,
