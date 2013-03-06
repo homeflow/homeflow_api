@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "homeflow_api"
-  s.version = "0.14.2"
+  s.version = "0.14.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Cooper"]
-  s.date = "2013-01-25"
+  s.date = "2013-03-06"
   s.description = "A gem for dealing the homeflow api"
   s.email = "daniel@homeflow.co.uk"
   s.extra_rdoc_files = [
