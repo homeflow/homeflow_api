@@ -28,6 +28,7 @@ module Homeflow
       "locations" => Homeflow::API::Location,
       "counties" => Homeflow::API::County,
       "branch" => Homeflow::API::Branch,
+      "branches" => Homeflow::API::Branch,
       "session" => Homeflow::API::Session,
       "portal" => Homeflow::API::Portal,
       'user' => Homeflow::API::User,
