@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "homeflow_api"
-  s.version = "0.14.3"
+  s.version = "0.14.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Cooper"]
-  s.date = "2013-03-06"
+  s.date = "2013-03-14"
   s.description = "A gem for dealing the homeflow api"
   s.email = "daniel@homeflow.co.uk"
   s.extra_rdoc_files = [
@@ -53,6 +53,7 @@ Gem::Specification.new do |s|
     "lib/homeflow/api/search.rb",
     "lib/homeflow/api/session.rb",
     "lib/homeflow/api/site.rb",
+    "lib/homeflow/api/site_content_chunk.rb",
     "lib/homeflow/api/site_page.rb",
     "lib/homeflow/api/user.rb",
     "spec/data/example_search_response.json",
