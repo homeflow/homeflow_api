@@ -34,6 +34,8 @@ module Homeflow
       'user' => Homeflow::API::User,
       'message' => Homeflow::API::Message,
       "lead" => Homeflow::API::Lead,
+      "site_content_chunk" => Homeflow::API::SiteContentChunk,
+      "site_content_chunks" => Homeflow::API::SiteContentChunk,
       "postcodes" => Homeflow::API::Postcode,
       "postcode" => Homeflow::API::Postcode,
       "site_page" => Homeflow::API::SitePage,
