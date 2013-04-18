@@ -29,8 +29,6 @@ module Homeflow
         return (HTTParty.put("#{Homeflow::API.config.source}/#{request_specification.resource_uri}", :query => @request_specification.to_params.merge(constant_params), :body => @request_specification.post_params)).body
       elsif request_specification.is_a? Post
         return (HTTParty.post("#{Homeflow::API.config.source}/#{request_specification.resource_uri}", :query => @request_specification.to_params.merge(constant_params), :body => @request_specification.post_params)).body
-      elsif request_specification.is_a? Put
-        return (HTTParty.put("#{Homeflow::API.config.source}/#{request_specification.resource_uri}", :query => @request_specification.to_params.merge(constant_params), :body => @request_specification.post_params)).body 
       end
     end
 

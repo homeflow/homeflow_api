@@ -1,10 +1,7 @@
 #This module contains class methods used when building up querys on resources. Think index?
 module Homeflow
   module API
-<<<<<<< Updated upstream
    class Put < Post
-=======
-   class Put < RequestSpecification
 
     attr_accessor :resource_uri
 
@@ -21,7 +18,6 @@ module Homeflow
     def to_params
       @params
     end
->>>>>>> Stashed changes
 
    end
   end
