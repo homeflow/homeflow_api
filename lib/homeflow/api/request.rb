@@ -30,7 +30,7 @@ module Homeflow
         puts "****************************************************************************************"
         puts "HESTIA CALL"
         puts "==========="
-        puts "Destination" - url
+        puts "Destination - #{url}"
         puts "Request params:\n#{query_params.to_json}\n"
         puts "Post params:\n#{post_params.to_json}\n"
         puts "request_specification:\n#{request_specification.to_json}\n"
