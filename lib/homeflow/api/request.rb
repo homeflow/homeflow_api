@@ -25,7 +25,7 @@ module Homeflow
         url = "#{Homeflow::API.config.source}/#{request_specification.resource_uri}"
       end
       query_params = @request_specification.to_params.merge(constant_params)
-      post_params = @request_specification.post_params
+      post_params = (@request_specification.respond_to?(:post_params) ? @request_specification.post_params : {})
       if Homeflow::API.config.show_debug
         puts "****************************************************************************************"
         puts "HESTIA CALL"
@@ -39,17 +39,18 @@ module Homeflow
       end
 
       if request_specification.is_a? Query
-        return (HTTParty.get   (url, :query => query)).body
+        return (HTTParty.get(url, :query => query_params)).body
       elsif request_specification.is_a? ResourceIdentifier
-        return (HTTParty.get   (url, :query => query)).body
+        return (HTTParty.get(url, :query => query_params)).body
       elsif request_specification.is_a? Delete
-        return (HTTParty.delete(url, :query => query)).body
+        return (HTTParty.delete(url, :query => query_params)).body
       elsif request_specification.is_a? Put
-        return (HTTParty.put   (url, :query => query, :body => post_params)).body
+        return (HTTParty.put(url, :query => query_params, :body => post_params)).body
       elsif request_specification.is_a? Post
-        return (HTTParty.post  (url, :query => query, :body => post_params)).body
+        return (HTTParty.pos(url, :query => query_params, :body => post_params)).body
       end
     end
+
 
     def constant_params
       {:api_key=> Homeflow::API.config.api_key}
