@@ -20,15 +20,34 @@ module Homeflow
 
     def perform_request
       if request_specification.is_a? Query
-        return (HTTParty.get("#{Homeflow::API.config.source}/#{request_specification.resource_class.resource_uri}", :query => @request_specification.to_params.merge(constant_params))).body
+        url = "#{Homeflow::API.config.source}/#{request_specification.resource_class.resource_uri}"
+      else
+        url = "#{Homeflow::API.config.source}/#{request_specification.resource_uri}"
+      end
+      query_params = @request_specification.to_params.merge(constant_params)
+      post_params = @request_specification.post_params
+      if Homeflow::API.config.show_debug
+        puts "****************************************************************************************"
+        puts "HESTIA CALL"
+        puts "==========="
+        puts "Destination" - url
+        puts "Request params:\n#{query_params.to_json}\n"
+        puts "Post params:\n#{post_params.to_json}\n"
+        puts "request_specification:\n#{request_specification.to_json}\n"
+        puts "@request_specification:\n#{@request_specification.to_json}\n"
+        puts "****************************************************************************************"
+      end
+
+      if request_specification.is_a? Query
+        return (HTTParty.get   (url, :query => query)).body
       elsif request_specification.is_a? ResourceIdentifier
-        return (HTTParty.get("#{Homeflow::API.config.source}/#{request_specification.resource_uri}", :query => @request_specification.to_params.merge(constant_params))).body
+        return (HTTParty.get   (url, :query => query)).body
       elsif request_specification.is_a? Delete
-        return (HTTParty.delete("#{Homeflow::API.config.source}/#{request_specification.resource_uri}", :query => @request_specification.to_params.merge(constant_params))).body
+        return (HTTParty.delete(url, :query => query)).body
       elsif request_specification.is_a? Put
-        return (HTTParty.put("#{Homeflow::API.config.source}/#{request_specification.resource_uri}", :query => @request_specification.to_params.merge(constant_params), :body => @request_specification.post_params)).body
+        return (HTTParty.put   (url, :query => query, :body => post_params)).body
       elsif request_specification.is_a? Post
-        return (HTTParty.post("#{Homeflow::API.config.source}/#{request_specification.resource_uri}", :query => @request_specification.to_params.merge(constant_params), :body => @request_specification.post_params)).body
+        return (HTTParty.post  (url, :query => query, :body => post_params)).body
       end
     end
 

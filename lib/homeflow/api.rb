@@ -61,11 +61,12 @@ module Homeflow
 
     # A configuration instance
     class Configuration
-      attr_accessor :api_key, :source
+      attr_accessor :api_key, :source, :show_debug
 
       def initialize
         @api_key = 'API_KEY_REQUIRED'
         @source = 'http://localhost:3000'
+        @show_debug = false
       end
     end
 
