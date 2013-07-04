@@ -14,6 +14,8 @@ gem "httparty"
 
 group :test do
   gem 'test-unit'
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'shoulda'
   gem "rspec"
 end

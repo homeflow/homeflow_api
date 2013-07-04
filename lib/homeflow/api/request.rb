@@ -26,16 +26,14 @@ module Homeflow
       end
       query_params = @request_specification.to_params.merge(constant_params)
       post_params = (@request_specification.respond_to?(:post_params) ? @request_specification.post_params : {})
-      if Homeflow::API.config.show_debug
-        puts "****************************************************************************************"
-        puts "HESTIA CALL"
-        puts "==========="
-        puts "Destination - #{url}"
-        puts "Request params:\n#{query_params.to_json}\n"
-        puts "Post params:\n#{post_params.to_json}\n"
-        puts "request_specification:\n#{request_specification.to_json}\n"
-        puts "@request_specification:\n#{@request_specification.to_json}\n"
-        puts "****************************************************************************************"
+      if Homeflow::API.config.show_debug && Homeflow::API.configuration.logger
+        log_line = [] 
+        log_line << "Destination - #{url}"
+        log_line << "Request params:\n#{query_params.to_json}\n"
+        log_line << "Post params:\n#{post_params.to_json}\n"
+        log_line << "request_specification:\n#{request_specification.to_json}\n"
+        log_line << "@request_specification:\n#{@request_specification.to_json}\n"
+        Homeflow::API.configuration.logger.info(log_line.join("\n"))
       end
 
       if request_specification.is_a? Query
