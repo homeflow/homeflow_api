@@ -8,7 +8,7 @@ group :development do
   gem "jeweler", "~> 1.6.4"
 end
 
-gem "hashie", "~> 1.1"
+gem "hashie"
 gem "json"
 gem "httparty"
 
