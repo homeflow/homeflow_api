@@ -45,7 +45,7 @@ module Homeflow
       elsif request_specification.is_a? Put
         return (HTTParty.put(url, :query => query_params, :body => post_params)).body
       elsif request_specification.is_a? Post
-        return (HTTParty.pos(url, :query => query_params, :body => post_params)).body
+        return (HTTParty.post(url, :query => query_params, :body => post_params)).body
       end
     end
 
