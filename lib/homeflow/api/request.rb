@@ -14,7 +14,7 @@ module Homeflow
 
     def perform
       begin
-        response = perform_request
+        response = body_of_request(perform_request)
       rescue Errno::ECONNREFUSED => e
         raise Homeflow::API::Exceptions::APIConnectionError, "Connection error. Homeflow might be down?"
       end
@@ -40,15 +40,23 @@ module Homeflow
       end
 
       if request_specification.is_a? Query
-        return (self.class.get(url, :query => query_params)).body
+        return (self.class.get(url, :query => query_params))
       elsif request_specification.is_a? ResourceIdentifier
-        return (self.class.get(url, :query => query_params)).body
+        return (self.class.get(url, :query => query_params))
       elsif request_specification.is_a? Delete
-        return (self.class.delete(url, :query => query_params)).body
+        return (self.class.delete(url, :query => query_params))
       elsif request_specification.is_a? Put
-        return (self.class.put(url, :query => query_params, :body => post_params)).body
+        return (self.class.put(url, :query => query_params, :body => post_params))
       elsif request_specification.is_a? Post
-        return (self.class.post(url, :query => query_params, :body => post_params)).body
+        return (self.class.post(url, :query => query_params, :body => post_params))
+      end
+    end
+
+    def body_of_request(request)
+      if resquest.respond_to? :body
+        request.body
+      else
+        body
       end
     end
 
