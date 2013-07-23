@@ -53,7 +53,7 @@ module Homeflow
     end
 
     def body_of_request(request)
-      if resquest.respond_to? :body
+      if request.respond_to? :body
         request.body
       else
         body
