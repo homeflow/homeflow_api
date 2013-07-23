@@ -56,7 +56,7 @@ module Homeflow
       if request.respond_to? :body
         request.body
       else
-        body
+        request
       end
     end
 
