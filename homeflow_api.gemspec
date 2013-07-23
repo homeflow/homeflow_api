@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "homeflow_api"
-  s.version = "0.17.6"
+  s.version = "0.17.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Cooper"]
@@ -69,7 +69,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/homeflow/Homeflow_Api"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.25"
+  s.rubygems_version = "1.8.24"
   s.summary = "Homeflow API Gem"
 
   if s.respond_to? :specification_version then
