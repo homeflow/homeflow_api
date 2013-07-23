@@ -3,6 +3,9 @@ module Homeflow
    YAML::ENGINE.yamler = "syck"
    class Request
 
+    include HTTParty
+
+
     attr_accessor :resource_class, :request_specification
 
     def initialize(request_specification)
@@ -37,15 +40,15 @@ module Homeflow
       end
 
       if request_specification.is_a? Query
-        return (HTTParty.get(url, :query => query_params)).body
+        return (get(url, :query => query_params)).body
       elsif request_specification.is_a? ResourceIdentifier
-        return (HTTParty.get(url, :query => query_params)).body
+        return (get(url, :query => query_params)).body
       elsif request_specification.is_a? Delete
-        return (HTTParty.delete(url, :query => query_params)).body
+        return (delete(url, :query => query_params)).body
       elsif request_specification.is_a? Put
-        return (HTTParty.put(url, :query => query_params, :body => post_params)).body
+        return (put(url, :query => query_params, :body => post_params)).body
       elsif request_specification.is_a? Post
-        return (HTTParty.post(url, :query => query_params, :body => post_params)).body
+        return (post(url, :query => query_params, :body => post_params)).body
       end
     end
 
