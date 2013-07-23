@@ -40,15 +40,15 @@ module Homeflow
       end
 
       if request_specification.is_a? Query
-        return (get(url, :query => query_params)).body
+        return (self.class.get(url, :query => query_params)).body
       elsif request_specification.is_a? ResourceIdentifier
-        return (get(url, :query => query_params)).body
+        return (self.class.get(url, :query => query_params)).body
       elsif request_specification.is_a? Delete
-        return (delete(url, :query => query_params)).body
+        return (self.class.delete(url, :query => query_params)).body
       elsif request_specification.is_a? Put
-        return (put(url, :query => query_params, :body => post_params)).body
+        return (self.class.put(url, :query => query_params, :body => post_params)).body
       elsif request_specification.is_a? Post
-        return (post(url, :query => query_params, :body => post_params)).body
+        return (self.class.post(url, :query => query_params, :body => post_params)).body
       end
     end
 
