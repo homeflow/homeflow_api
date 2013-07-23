@@ -68,7 +68,11 @@ module Homeflow
     class << self
       def run_for(request_specification)
         r = Request.new(request_specification)
-        Response.new_from_json(r.perform)
+        if r.is_a? Hash
+          Response.new(r)
+        else
+          Response.new_from_json(r.perform)
+        end
       end
     end
     
