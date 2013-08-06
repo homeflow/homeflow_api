@@ -22,11 +22,7 @@ module Homeflow
     end
 
     def perform_request
-      if request_specification.is_a? Query
-        url = "#{Homeflow::API.config.source}/#{request_specification.resource_class.resource_uri}"
-      else
-        url = "#{Homeflow::API.config.source}/#{request_specification.resource_uri}"
-      end
+      url = normalised_base_url
       query_params = @request_specification.to_params.merge(constant_params)
       post_params = (@request_specification.respond_to?(:post_params) ? @request_specification.post_params : {})
       if Homeflow::API.config.show_debug && Homeflow::API.configuration.logger
@@ -49,6 +45,15 @@ module Homeflow
         return (self.class.put(url, :query => query_params, :body => post_params))
       elsif request_specification.is_a? Post
         return (self.class.post(url, :query => query_params, :body => post_params))
+      end
+    end
+
+    def normalised_base_url
+      source = Homeflow::API.config.source.gsub(/.\/$/,'')
+      if request_specification.is_a? Query
+        return "#{source}/#{request_specification.resource_class.resource_uri}"
+      else
+        return "#{source}/#{request_specification.resource_uri}"
       end
     end
 
