@@ -1,7 +1,7 @@
 
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "homeflow_api/version"
+require "homeflow/api"
 
 Gem::Specification.new do |s|
   s.name        = "homeflow_api"
@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Daniel Cooper"]
   s.date        = "2013-08-06"
+  s.summary     = 'The Homeflow API'
   s.description = "A gem for dealing the homeflow api"
   s.email       = "daniel@homeflow.co.uk"
   s.license     = 'MIT'
