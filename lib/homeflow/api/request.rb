@@ -1,6 +1,6 @@
 module Homeflow
   module API
-   YAML::ENGINE.yamler = "syck"
+  YAML::ENGINE.yamler= 'syck' if defined?(YAML::ENGINE)
    class Request
 
     include HTTParty
