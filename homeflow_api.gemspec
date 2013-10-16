@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency(%q<hashie>, [">= 0"])
-  s.add_dependency(%q<json>, [">= 0"])
+  s.add_dependency(%q<multi_json>, [">= 0"])
   s.add_dependency(%q<httparty>, [">= 0"])
   s.add_development_dependency(%q<shoulda>, [">= 0"])
   s.add_dependency(%q<bundler>, [">= 0"])

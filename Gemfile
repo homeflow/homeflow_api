@@ -8,7 +8,7 @@ group :development do
 end
 
 gem "hashie"
-gem "json"
+gem "multi_json"
 gem "httparty"
 
 group :test do

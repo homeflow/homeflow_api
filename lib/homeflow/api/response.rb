@@ -5,8 +5,8 @@ module Homeflow
 
     def self.new_from_json(json)
       begin
-       hash = JSON.parse(json) 
-      rescue JSON::ParserError
+       hash = MultiJson.load(json) 
+      rescue MultiJson::LoadError
         raise Homeflow::API::Exceptions::InvalidResponse
       end
       raise Homeflow::API::Exceptions::InvalidResponse unless hash.is_a?(Hash)
