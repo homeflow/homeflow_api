@@ -4,12 +4,15 @@ module Homeflow
       include Homeflow::API::Queryable
       include Hashie::Extensions::IndifferentAccess
       include Hashie::Extensions::MethodAccess
+      include Hashie::Extensions::MergeInitializer
 
 
       def initialize(hash = {})
         hash.each_pair do |k,v|
           if v.kind_of?(Array)
-            self[k] = v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e }
+            self[k] = v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e } 
+          elsif v.kind_of?(Hash)
+            self[k] = self.class.new(v)
           else
             self[k] = v
           end
