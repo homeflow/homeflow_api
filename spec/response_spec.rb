@@ -23,10 +23,14 @@ describe Homeflow::API::Response do
     it "should provide addressabe objects" do
       file = File.read(File.dirname(__FILE__) + '/data/example_search_response.json')
       response = Homeflow::API::Response.new_from_json(file)
-
-
       expect(response.properties.first.display_address).to eq "a lovely fake display adddress"
+    end
 
+    it "should provide addressabe objects" do
+      file = File.read(File.dirname(__FILE__) + '/data/radar.json')
+      response = Homeflow::API::Response.new_from_json(file)
+      expect(response.portal.mobile_menu_items.first.type).to eq "mobile"
+      raise response.portal.mobile_menu_items.first.class.name.inspect
     end
 
 
