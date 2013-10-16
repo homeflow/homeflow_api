@@ -9,7 +9,7 @@ module Homeflow
       def initialize(hash = {})
         hash.each_pair do |k,v|
           if v.kind_of?(Array)
-            self[k] = v.map { |e| e.is_a?(::Hash) ? self.new(e) : e }
+            self[k] = v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e }
           else
             self[k] = v
           end
