@@ -17,6 +17,16 @@ module Homeflow
         end
       end
 
+      def [](key)
+        key = key.to_sym if key.is_a? String
+        super(key)
+      end
+
+      def []=(key, value)
+        key = key.to_sym if key.is_a? String
+        super(key, value)
+      end
+
       def respond_to?(name, include_private = false)
         return true if key?(name.to_sym)
         super
