@@ -1,7 +1,8 @@
 module Homeflow
   module API
-   class Resource < ::Hashie::Mash
+   class Resource < Hash
       include Homeflow::API::Queryable
+      include Hashie::Extensions::MethodAccess
 
       class << self
 

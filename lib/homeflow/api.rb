@@ -1,4 +1,4 @@
-require 'hashie/mash'
+require 'hashie'
 require 'json'
 require 'httparty'
 
