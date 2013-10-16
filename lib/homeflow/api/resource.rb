@@ -2,22 +2,31 @@ module Homeflow
   module API
    class Resource < Hash
       include Homeflow::API::Queryable
-      include Hashie::Extensions::IndifferentAccess
-      include Hashie::Extensions::MethodAccess
-      include Hashie::Extensions::MergeInitializer
+      include Hashie::Extensions::MethodQuery
 
 
       def initialize(hash = {})
         hash.each_pair do |k,v|
           if v.kind_of?(Array)
-            self[k] = v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e } 
+            self[k.to_sym] = v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e } 
           elsif v.kind_of?(Hash)
-            self[k] = self.class.new(v)
+            self[k.to_sym] = self.class.new(v)
           else
-            self[k] = v
+            self[k.to_sym] = v
           end
         end
       end
+
+      def respond_to?(name, include_private = false)
+        return true if key?(name.to_sym)
+        super
+      end
+      
+      def method_missing(name, *args)
+        return self[name.to_sym] if key?(name.to_sym)
+        return nil
+      end
+    
 
       class << self
 
