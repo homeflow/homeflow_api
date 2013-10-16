@@ -20,6 +20,15 @@ describe Homeflow::API::Response do
       expect {Homeflow::API::Response.new_from_json(error)}.to raise_error(Homeflow::API::Exceptions::InvalidResponse)
     end
 
+    it "should provide addressabe objects" do
+      file = File.read(File.dirname(__FILE__) + '/data/example_search_response.json')
+      response = Homeflow::API::Response.new_from_json(file)
+
+
+      expect(response.properties.first.display_address).to eq "a lovely fake display adddress"
+
+    end
+
 
     it "should correctly produce alturnative locations" do
       file = File.read(File.dirname(__FILE__) + '/data/with_alt_places.json')
