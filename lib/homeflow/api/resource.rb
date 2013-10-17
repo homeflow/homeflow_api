@@ -31,6 +31,11 @@ module Homeflow
         return true if key?(name.to_sym)
         super
       end
+
+      def has_key?(key)
+        key = key.to_sym if key.is_a? String
+        super(key)
+      end
       
       def method_missing(name, *args)
         return self[name.to_sym] if key?(name.to_sym)
