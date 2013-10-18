@@ -27,7 +27,6 @@ module Homeflow
 
       def respond_to?(name, include_private = false)
         return true if has_key?(name)
-        return true if @data.respond_to?(name, include_private)
         super
       end
 
@@ -38,11 +37,7 @@ module Homeflow
       
       def method_missing(name, *args)
         return self[name] if has_key?(name)
-        if @data.respond_to?(name)
-          @data.send(name, *args)
-        else
-          return nil
-        end
+        return nil
       end
     
 
