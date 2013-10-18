@@ -9,8 +9,8 @@ module Homeflow
         @data = hash
       end
 
-      def [](key)
-        k = key.to_s if !key.is_a?(String)
+      def [](k)
+        k = k.to_s if !k.is_a?(String)
         v = @data[k]
         if v.kind_of?(Array)
           return v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e } 
@@ -31,8 +31,8 @@ module Homeflow
       end
 
       def has_key?(key)
-        k = key.to_s if !key.is_a?(String)
-        @data.has_key?(k)
+        key = key.to_s if !key.is_a?(String)
+        @data.has_key?(key)
       end
       
       def method_missing(name, *args)
