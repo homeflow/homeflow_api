@@ -1,6 +1,6 @@
 module Homeflow
   module API
-   class Resource < Hash
+   class Resource
       include Homeflow::API::Queryable
       include Hashie::Extensions::MethodQuery
 
@@ -22,8 +22,7 @@ module Homeflow
       end
 
       def []=(key, value)
-        key = key.to_sym if key.is_a? String
-        super(key, value)
+        @data.send(:[]=, key.to_s, value)
       end
 
       def respond_to?(name, include_private = false)
