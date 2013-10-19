@@ -1,45 +1,47 @@
 module Homeflow
   module API
-   class Resource < Hash
+   class Resource
       include Homeflow::API::Queryable
       include Hashie::Extensions::MethodQuery
 
-
       def initialize(hash = {})
-        hash.each_pair do |k,v|
-          if v.kind_of?(Array)
-            self[k.to_sym] = v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e } 
-          elsif v.kind_of?(Hash)
-            self[k.to_sym] = self.class.new(v)
-          else
-            self[k.to_sym] = v
-          end
-        end
+        @data = hash
       end
 
-      def [](key)
-        key = key.to_sym if key.is_a? String
-        super(key)
+      def [](k)
+        k = k.to_s if !k.is_a?(String)
+        v = @data[k]
+        if v.kind_of?(Array)
+          return v.map { |e| e.is_a?(::Hash) ? self.class.new(e) : e } 
+        elsif v.kind_of?(Hash)
+          return self.class.new(v)
+        else
+          return v
+        end     
       end
 
       def []=(key, value)
-        key = key.to_sym if key.is_a? String
-        super(key, value)
+        @data.send(:[]=, key.to_s, value)
       end
 
       def respond_to?(name, include_private = false)
-        return true if key?(name.to_sym)
+        return true if has_key?(name)
+        return true if @data.respond_to?(name, include_private)
         super
       end
 
       def has_key?(key)
-        key = key.to_sym if key.is_a? String
-        super(key)
+        key = key.to_s if !key.is_a?(String)
+        @data.has_key?(key)
       end
       
       def method_missing(name, *args)
-        return self[name.to_sym] if key?(name.to_sym)
-        return nil
+        return self[name] if has_key?(name)
+        if @data.respond_to?(name)
+          @data.send(name, *args)
+        else
+          return nil
+        end
       end
     
 
