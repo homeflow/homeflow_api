@@ -5,7 +5,7 @@ module Homeflow
 
     include HTTParty
 
-    parser Proc.new {|data| ""}
+    parser Proc.new {|data| MultiJson.load(data)}
 
 
     attr_accessor :resource_class, :request_specification
@@ -16,7 +16,7 @@ module Homeflow
 
     def perform
       begin
-        response = body_of_request(perform_request)
+        response = perform_request
       rescue Errno::ECONNREFUSED => e
         raise Homeflow::API::Exceptions::APIConnectionError, "Connection error. Homeflow might be down?"
       end
@@ -76,7 +76,7 @@ module Homeflow
       def run_for(request_specification)
         r = Request.new(request_specification)
         r = r.perform
-        Response.new_from_json(r)
+        Response.new(r.parsed_response)
       end
     end
     
