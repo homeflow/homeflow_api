@@ -5,6 +5,8 @@ module Homeflow
 
     include HTTParty
 
+    parser Proc.new {|data| ""}
+
 
     attr_accessor :resource_class, :request_specification
 
@@ -74,11 +76,7 @@ module Homeflow
       def run_for(request_specification)
         r = Request.new(request_specification)
         r = r.perform
-        if r.is_a? Hash
-          Response.new(r)
-        else
-          Response.new_from_json(r)
-        end
+        Response.new_from_json(r)
       end
     end
     
