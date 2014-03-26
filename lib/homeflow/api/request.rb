@@ -5,9 +5,6 @@ module Homeflow
 
     include HTTParty
 
-    parser Proc.new {|data| MultiJson.load(data)}
-
-
     attr_accessor :resource_class, :request_specification
 
     def initialize(request_specification)
@@ -28,7 +25,7 @@ module Homeflow
       query_params = @request_specification.to_params.merge(constant_params)
       post_params = (@request_specification.respond_to?(:post_params) ? @request_specification.post_params : {})
       if Homeflow::API.config.show_debug && Homeflow::API.configuration.logger
-        log_line = [] 
+        log_line = []
         log_line << "Destination - #{url}"
         log_line << "Request params:\n#{query_params.to_json}\n"
         log_line << "Post params:\n#{post_params.to_json}\n"
@@ -79,7 +76,7 @@ module Homeflow
         Response.new(r.parsed_response)
       end
     end
-    
+
    end
   end
 end
