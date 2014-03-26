@@ -1,5 +1,7 @@
 current_dir = File.expand_path(File.dirname(__FILE__))
-Bundler.require if defined?(Bundler)
+if defined?(Bundler)
+  Bundler.require
+end
 
 require current_dir + "/api/request"
 require current_dir + "/api/queryable"
