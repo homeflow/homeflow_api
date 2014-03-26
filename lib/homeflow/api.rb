@@ -1,8 +1,5 @@
-require 'hashie'
-require 'json'
-require 'httparty'
-
 current_dir = File.expand_path(File.dirname(__FILE__))
+Bundler.require
 
 require current_dir + "/api/request"
 require current_dir + "/api/queryable"
@@ -40,7 +37,7 @@ require current_dir + "/api/response"
 module Homeflow
   module API
 
-    VERSION = "1.0.3"
+    VERSION = "1.0.4"
 
     class << self
       attr_accessor :configuration

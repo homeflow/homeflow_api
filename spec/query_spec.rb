@@ -17,22 +17,3 @@ describe Homeflow::API::Queryable do
 
   end
 end
-
-
-describe Homeflow::API::Resource do
-  context "When inhereted by a class" do
-
-    it "should cause the implementing class to recive a message when find is called" do
-      data = File.read(File.dirname(__FILE__) + '/data/property_details.json')
-      Homeflow::API::Request.any_instance.should_receive(:perform).and_return(data)
-      property =  Homeflow::API::Property.find(2).property
-      property.class.should == Homeflow::API::Property
-    end
-
-
-     it "should provide uri" do
-      Homeflow::API::Property.resource_uri.should == 'properties'
-    end
-
-  end
-end

@@ -30,7 +30,23 @@ describe Homeflow::API::Response do
       file = File.read(File.dirname(__FILE__) + '/data/radar.json')
       response = Homeflow::API::Response.new_from_json(file)
       expect(response.portal.mobile_menu_items.first.type).to eq "mobile"
-      raise response.portal.mobile_menu_items.first.class.name.inspect
+
+
+      file = File.read(File.dirname(__FILE__) + '/data/whitton.json')
+      response = Homeflow::API::Response.new_from_json(file)
+
+      expect(response.agency.preferences.prefered_portal_id).to be nil
+    end
+
+    it "Calling a method that doesn't exists should return nil" do
+
+      file = File.read(File.dirname(__FILE__) + '/data/property_details.json')
+      response = Homeflow::API::Response.new_from_json(file)
+
+
+      expect(response.property.agency.branch.whatthe).to be nil
+      
+
     end
 
 
