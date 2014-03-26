@@ -1,5 +1,5 @@
 current_dir = File.expand_path(File.dirname(__FILE__))
-Bundler.require
+Bundler.require if defined?(Bundler)
 
 require current_dir + "/api/request"
 require current_dir + "/api/queryable"
@@ -36,8 +36,6 @@ require current_dir + "/api/response"
 
 module Homeflow
   module API
-
-    VERSION = "1.0.4"
 
     class << self
       attr_accessor :configuration

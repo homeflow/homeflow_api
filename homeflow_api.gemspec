@@ -1,10 +1,7 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "homeflow/api"
-
 Gem::Specification.new do |s|
   s.name        = "homeflow_api"
-  s.version     = Homeflow::API::VERSION
+  s.version     = '1.0.4'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Daniel Cooper"]
   s.date        = "2013-08-06"
@@ -20,7 +17,6 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<bundler>, [">= 0"])
   s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
 
-  s.files         = `git ls-files`.split("\n")
+  s.files = `git ls-files -z`.split "\0"
   s.require_paths = ["lib"]
 end
-
