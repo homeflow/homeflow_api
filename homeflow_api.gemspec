@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name        = "homeflow_api"
-  s.version     = '1.0.4'
+  s.version     = '1.0.5'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Daniel Cooper"]
   s.date        = "2013-08-06"
