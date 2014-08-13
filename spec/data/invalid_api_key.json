@@ -1,1 +1,0 @@
-{"error":{"type":"APIArgumentError","message":"api_key was invalid"},"query":{"page":"1","api_key":"7ea9bbb0771dd16679d20c9b27a0e97csearch[channel]=sales","search":{"min_price":"50000"},"action":"index","controller":"properties"},"result":{},"response":{"status":400,"time_taken":41.683496}}
