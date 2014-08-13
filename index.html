@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Homeflow api by homeflow</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Homeflow api</h1>
+        <h2></h2>
+        <a href="https://github.com/homeflow/homeflow_api" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <ul>
+<li><a href="/homeflow/homeflow_api/wiki">Home</a></li>
+<li>
+<a href="/homeflow/homeflow_api/wiki/ctesius#getting-started">Getting started</a>
+
+<ul>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#theme-folder-structure">Theme folder structure</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-layout-file">The layout file</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#building-up-the-layout">Building up the layout</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#running-your-theme">Running your theme</a></li>
+</ul>
+</li>
+<li>
+<a href="/homeflow/homeflow_api/wiki/ctesius#building-up-the-application-and-home-page">Application &amp; home page</a>
+
+<ul>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-header-with-an-agency-or-portal-logo">The header</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-navigation-menu">The navigation menu</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-carousel">The carousel</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-footer">The footer</a></li>
+</ul>
+</li>
+<li>
+<a href="/homeflow/homeflow_api/wiki/ctesius#working-with-property-searches">Property Searching</a>
+
+<ul>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius/working-with-property-searches#constructing-a-property-search-form">Property search form</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#displaying-search-results">Displaying search results</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-properties-loop">The properties loop</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#handling-with-locations-and-postcodes">Locations and postcodes</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#headings-and-pagination">Headings and pagination</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#more-on-pagination">More on pagination</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#togglable-areas">Togglable areas</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#working-with-the-map-view">Working with map views</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#working-with-grid-views">Working with grid views</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#saving-properties-to-a-shortlist">Saving to shortlist</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#saving-searches">Saving searches</a></li>
+</ul>
+</li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#draw-a-map">Draw a Map</a></li>
+<li>
+<a href="/homeflow/homeflow_api/wiki/ctesius#the-property-show-page">The property show page</a>
+
+<ul>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#outputting-basic-information">Outputting basic information</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#other-property-drops">Other property drops</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#working-with-maps">Working with maps</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#submitting-a-lead">Submitting a lead</a></li>
+</ul>
+</li>
+<li>
+<a href="/homeflow/homeflow_api/wiki/ctesius#working-with-agencies">Working with agencies</a>
+
+<ul>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-agency-show-page">Agency show page</a></li>
+</ul>
+</li>
+<li>
+<a href="/homeflow/homeflow_api/wiki/ctesius#working-with-branches">Working with branches</a>
+
+<ul>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-branches-index">The branches index</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#working-with-branch-maps">Branch maps</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#branch-searching">Branch searching</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#branch-titles-and-pagination">Titles and pagination</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#the-branch-show">The branch show</a></li>
+<li>
+<a href="/homeflow/homeflow_api/wiki/ctesius#displaying-branch-properties">Branch properties</a>
+
+<ul>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#displaying-branch-properties">Recent sales and lettings</a></li>
+<li><a href="/homeflow/homeflow_api/wiki/ctesius#all-branch-properties">All branch properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1>
+<a name="the-homeflow-api" class="anchor" href="#the-homeflow-api"><span class="octicon octicon-link"></span></a>The Homeflow API</h1>
+
+<p>Hi there and welcome to the Homeflow wiki.</p>
+
+<p>Homeflow provides developers with everything they need to build exceptional property based websites. Within this Wiki we hope you will find all the information you need to get your agency or portal theme up and running.</p>
+
+<p>You'll use the IDE you're familiar with plus all the developer tools you know and love such as: HTML, CSS, JavaScript and jQuery. You will make your own decisions on the plugins you or your customer requires and have complete design control over your new website from the word go.</p>
+
+<p>As alluded to above, we're making the assumption that you're familiar with HTML, CSS etc. You will also need a basic working knowledge of Git and Liquid, though both are relatively simple to pick up as you go along.</p>
+
+<p>Before we get started, there are three areas of the Homeflow API to be aware of as they will be mentioned throughout this documentation:</p>
+
+<p>1) The Agency/Portal Admin<br>
+2) Hestia<br>
+3) Ctesius</p>
+
+<p>You can consider The Agency and Portal Admin as the repository of all the information related to an agency or portal (essentially a CMS) - think properties, pages, content, images and more. Hestia (The Greek Goddess of the Heart) allows the querying of this information at lightning fast speeds. Finally Ctesius (The Greek God of Property) is our frontend application that is powered by Hestia. It includes an event management system, supports advanced property searching, user profiling and will support and augment the theme you will build. </p>
+
+<p>All themes are developed using mostly HTML, CSS and JavaScript, but they also make use of the Liquid templating system, made popular by Shopify. Liquid sits in places of your code where dynamic content is required, such as property, agency, staff or user information.</p>
+
+<p>We will explore all of the technologies mentioned above in much more detail later in the Wiki. In the meantime you can head straight over to the section you require using the menu on the right or move on to <a href="/homeflow/homeflow_api/wiki/ctesius#getting-started">Getting started</a>.</p>
+
+<h1>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h1>
+
+<p>Firstly we will need to initialise a Git repository for your theme on our platform and provide it with an API key so it can query Hestia and get the information it needs. You don't need to do anything here and it's a stage we will automate in the future. </p>
+
+<p>Once we have done this we will create you an account on <code>Gitlab</code> (our internal Git platform) and you will receive an automatic email containing your login information. Before you can get to work on your theme, your will need to supply Gitlab with your <code>Public SSH key</code>. This is so you can clone and push/pull to and from your theme's repository. For information on how to fetch or generate your SSH key, visit <a href="https://help.github.com/articles/generating-ssh-keys#platform-mac">this link</a>. </p>
+
+<p>This link will take you to the SSH section on Homeflow where you can paste in your key: <code>http://hades.homeflow.co.uk/keys</code>.</p>
+
+<p>To clone your repository, open up a command prompt and <code>cd</code> to directory of your choice (but one that you won't forget and is easy to get to!) and run the following:</p>
+
+<p><code>git clone &lt;link&gt;</code></p>
+
+<p>Your Git clone URL will look something like: <code>git@hades.homeflow.co.uk:fdesign/pantani.git</code>.</p>
+
+<p>By this point we should have provided you with a <code>staging</code> link so you/your team/your customer can view the development progress of the site. Once you have added your public key and you have successfully cloned your repository, we can now start to put your theme's folder structure together. </p>
+
+<h2>
+<a name="theme-folder-structure" class="anchor" href="#theme-folder-structure"><span class="octicon octicon-link"></span></a>Theme folder structure</h2>
+
+<p>Ctesius themes use the standard Rails conventions for folder layouts. Don't worry if you're not familiar with Rails or this structure as an example theme folder structure can be seen below or found on the demo <a href="https://github.com/homeflow/stabilisers">Stabilisers theme</a>.</p>
+
+<ul>
+<li>theme_name<br><ul>
+<li>agencies
+
+<ul>
+<li>index.liquid</li>
+<li>show.liquid</li>
+</ul>
+</li>
+<li>articles
+
+<ul>
+<li>index.liquid</li>
+<li>show.liquid</li>
+</ul>
+</li>
+<li>assets
+
+<ul>
+<li>images</li>
+<li>javascripts</li>
+<li>stylesheets
+
+<ul>
+<li>theme_styles.lcss - our LCSS file holds our styles just as a CSS file would</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>branches
+
+<ul>
+<li>_branches_list.ljson - a JSON view to list an array of branches</li>
+<li>index.liquid</li>
+<li>show.liquid</li>
+</ul>
+</li>
+<li>home
+
+<ul>
+<li>home.liquid - the main homepage</li>
+</ul>
+</li>
+<li>layouts
+
+<ul>
+<li>application.liquid - the main layout file which renders the other pages</li>
+</ul>
+</li>
+<li>pages
+
+<ul>
+<li>show.liquid</li>
+</ul>
+</li>
+<li>properties
+
+<ul>
+<li>_properties_list.ljson - a JSON view to list an array of properties</li>
+<li>index.liquid</li>
+<li>show.liquid</li>
+</ul>
+</li>
+<li>staff
+
+<ul>
+<li>index.liquid</li>
+<li>show.liquid</li>
+</ul>
+</li>
+<li>user
+
+<ul>
+<li>new.liquid</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><p>If your repository doesn't have these files and folders yet, add them in. Once done, make your first commit and push to your repository. We would recommend a Git GUI such as Tower for OSx or one of the freebies available for Linux such as Git Cola. If you're using Git via the command line, bring up a terminal, <code>cd</code> to you theme's root directory and run:</p>
+
+<p><code>git commit -a -m 'Theme folders and files'</code></p>
+
+<p>Then run:</p>
+
+<p><code>git push origin master</code></p>
+
+<p>This will add all of your modified files, commit them as well as push them to the remote repository. We can't view the site online just yet as there's nothing to render. Time to add some structure and content to our <code>application.liquid</code> file.</p>
+
+<h2>
+<a name="the-layout-file" class="anchor" href="#the-layout-file"><span class="octicon octicon-link"></span></a>The layout File</h2>
+
+<p>Every page render starts at the layout, which is always found in <code>/layouts/application.liquid</code>. This file will contain the html, head, and body tags and will define the overall 'makeup' of your site.</p>
+
+<p>Take a look at the source in the Stabilisers theme and you will see there's a few things to note. Firstly we link to the default styles and JavaScripts using our first bit of Liquid syntax:</p>
+
+<pre><code>   {{ "application" | javascript_include_tag }}
+   {{ "application" | stylesheet_link_tag }}
+</code></pre>
+
+<p>This will bring in all the default styles and some JavaScript libraries which form the basis of every Ctesius theme. As of the latest revision to this Wiki, they are:</p>
+
+<ul>
+<li>Bootstrap</li>
+<li>jQuery - v1.9</li>
+<li>jQuery Cycle - 3.0.3 (11-JUL-2013)</li>
+<li>jQuery Nivo Slider</li>
+<li>Backbone.js -  1.0.0</li>
+<li>Underscore.js - 1.4.3</li>
+<li>leaflet.js</li>
+<li>Font Awesome</li>
+<li>the Homeflow search and profile system</li>
+</ul><p>You'll also notice that we make another call:</p>
+
+<p><code>{{ "stabilisers" | theme_stylesheet_link_tag }}</code></p>
+
+<p>There is a subtle different between the two Liquid directives in that the latter has a <code>theme_</code> directive and the other does not. When you add a theme stylesheet or theme JavaScript directive, the theme will expect the quoted LCSS file to reside in <code>/assets/stylesheets</code> (<code>/assets/javascripts</code> for JavaScript files). LCSS files are pretty much CSS files run through a Liquid filter. This enables us to customise the CSS easily for different sites. The directive without the theme pointer will load something from the core app.</p>
+
+<p>Continuing with the layout file the next command you'll see is:</p>
+
+<p><code>{% include 'layouts/js_templates' %}</code></p>
+
+<p>This is the first include that we've seen. A bit like PHP includes, Liquid includes allow you include a partial template. This is excellent for including blocks that occur on several pages, or, as we'll see later, in Liquid for loops. Important point: partial names must be preceeded by an underscore <code>_</code>. When you call the partial however, no underscore is required though you must put the path in quotes.</p>
+
+<p>The directive here pulls in the default JavaScript templates for the dynamically drawn user sections of the site. They are all overridable so you can design them as you need to. We'll expand more on these templates later.</p>
+
+<p>Perhaps the most important section for the layout is the helper <code>content_for_layout</code>. This outputs the rendered results of the rest of the template.</p>
+
+<p><code>{{ content_for_layout }}</code></p>
+
+<p>In other words, all other template parts are like partials that get evaluated and loaded into this section.</p>
+
+<p>Finally we need to boot the Ctesius system to handle searches, user profiles and so on. To do that we add the following function:  </p>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+      $(document).ready(function(){ 
+        Ctesius.init()
+      });
+ &lt;/script&gt;
+</code></pre>
+
+<p>This needs to be used after any Ctesius events or config options are set. Some theme developers choose to add this function at the foot of application.liquid whereas others will add it to a theme JavaScripts file, include the directive at the bottom of it, then include the partial.</p>
+
+<h2>
+<a name="building-up-the-layout" class="anchor" href="#building-up-the-layout"><span class="octicon octicon-link"></span></a>Building up the layout</h2>
+
+<p>Other than the Liquid directives in the head section, the <code>content_for_layout</code> we saw earlier and the Ctesius boot, the <code>application.liquid</code> file is constructed just the same as a regular web page - add your classes and IDs, divs and CSS in the normal way and style them up using your theme CSS. Be sure to to put it in the stylesheets directive and make sure the names match up:</p>
+
+<p><code>{{ "your_theme_css" | theme_stylesheet_link_tag }}</code></p>
+
+<p>We talk more about images in the <a href="./assets">Working with images and assets</a> section, but for now add your agency's/portal's logo into the <code>/assets/images</code> folder and reference it in your application markup as follows:</p>
+
+<p><code>&lt;img src="{{'your_image.png' | theme_image_url : "70x70" }}" /&gt;</code></p>
+
+<p>You will notice that we have added a Liquid directive straight into the source of the image. Liquid will expect there to be an image of the name and extension quoted in your theme images folder (<code>/assets/images</code>). Also note that we've added an arguement on the end to ask Liquid to resize the image on the server, then send it to the browser - neat.</p>
+
+<h2>
+<a name="running-your-theme" class="anchor" href="#running-your-theme"><span class="octicon octicon-link"></span></a>Running your theme</h2>
+
+<p>Now that you have hopefully added your HTML, some CSS and some images, it's time to see the results. Commit and push your changes and observe the <code>staging</code> URL we sent to you. It will look something like:</p>
+
+<p>Agencies: <code>http://agency_homeflow_domain.agent.staging.homeflow.co.uk</code><br>
+Portals: <code>http://portal_homeflow_domain.search.staging.homeflow.co.uk</code></p>
+
+<p>Hopefully you will see the result in the browser.</p>
+
+<h2>
+<a name="building-up-the-application-and-home-page" class="anchor" href="#building-up-the-application-and-home-page"><span class="octicon octicon-link"></span></a>Building up the application and home page</h2>
+
+<p>At this point we can start to think about the elements that will be consistent to every page and those that will just reside on the home page. Those that are consistent to every page need to reside in the application.liquid file and would probably include:</p>
+
+<ul>
+<li>The header</li>
+<li>The navigation menu</li>
+<li>The footer</li>
+</ul><h2>
+<a name="the-header-with-an-agency-or-portal-logo" class="anchor" href="#the-header-with-an-agency-or-portal-logo"><span class="octicon octicon-link"></span></a>The header with an agency or portal logo</h2>
+
+<p>A header would probably consist of the agency or portal logo, so let's take a first foray into the Agency or Portal admin, add the logo, then pull it out and plug it into the source using Liquid. Note that if you'd rather just add or keep your logo in <code>/assets/images</code> that's absolutely fine.</p>
+
+<p>To get to your admin, you use a link similar to the two links outlined before:</p>
+
+<p>Agencies: <code>http://agency_homeflow_domain.homeflow.co.uk/admin</code><br>
+Portals: <code>http://portal_homeflow_domain.portal.homeflow.co.uk/admin</code></p>
+
+<p>We'll assume you have been provided with your login.</p>
+
+<p>In the agency admin, go to <code>Website/Appearance/Logos</code> and upload your logo<br>
+In the portal admin, go to <code>Configure/Appearance/Logos</code> and upload your portal logo.</p>
+
+<p>Now in your source, within your header tags or header div tags, add:</p>
+
+<p>Agency:<br><code>&lt;img src="{{ agency.logo | url_for_agency_logo }}" alt="{{agency.name}} logo" /&gt;</code></p>
+
+<p>Portal:<br><code>&lt;img src="{{ portal.website_logo | url_for_portal_logo }}" alt="{{portal.name}}" /&gt;</code></p>
+
+<p>There's a couple of new things here - the first is we need a <code>key</code> when referencing an agency or portal logo (and many other things as we'll see) and we're using the agency and portal Liquid name tag to fill in the alt attribute of the image. As you become more experienced with your template(s) you will find there's some useful and sometimes innovative ways you can use tags.</p>
+
+<h2>
+<a name="the-navigation-menu" class="anchor" href="#the-navigation-menu"><span class="octicon octicon-link"></span></a>The navigation menu</h2>
+
+<p>The navigation is another area where you have complete freedom of development - if you wanted to hardcode your menu and add/remove new or old items as they come along, that's absolutely fine. If however, you'd prefer to add the navigation tree to the agency admin and extract them using Liquid, that's fine too. Generally speaking portals add their menu to their source whereas theme designers or agency sites will tend to code the menu using Liquid, as their theme can then be deployed for multiple agencies.</p>
+
+<p>Let's assume for now you would like to query the agency admin and therefore Hestia for the menu and, if it has been added, its sub-menu counterpart.</p>
+
+<p>To start head over to your agency admin. Reminder: <code>http://agency_homeflow_domain.homeflow.co.uk/admin</code></p>
+
+<p>Then go to <code>Website/Navigation</code>. From here you can drag in menu items for existing pages or create custom links, e.g. to the <code>/branches</code> page for example. Once you've got your primary menu items, you can then edit each one and add sub-menu items.</p>
+
+<p>Here's a code construct that would retrieve the primary menu items:</p>
+
+<pre><code>{% assign primary_menu = 'primary' | site_menu %}
+&lt;ul class="top-level"&gt;
+    {% for menu_item in primary_menu.items %}
+        &lt;li class="top-level-li"&gt;
+            &lt;a href="{{ menu_item.url }}"&gt;{{ menu_item.name }}&lt;/a&gt;
+        &lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>Here we can see two new things: an <code>assign</code> statement and a Liquid <code>for loop</code>.</p>
+
+<p>The <code>assign</code> statement allows you to assign something to a Liquid variable. This can be as simple as a string or result of some evaluation. Also, as seen above, you can assign Liquid objects to a variable for looping and other purposes.</p>
+
+<p>And the good old <code>for loop</code>. You'll probably be familiar with the <code>for loop</code> from other programming languages and Liquid's variant is very simple to use - loop through an object and you can write out its attributes as required.</p>
+
+<p>So what about a nested menu to support dropdrowns? Here's a code construct that will satisfy this requirement:</p>
+
+<pre><code>&lt;ul class="top-level"&gt;
+    {% assign primary_menu = 'primary' | site_menu %}
+    {% for menu_item in primary_menu.items %}
+        &lt;li class="top-level-li"&gt;
+            &lt;a class="navigation" href="{{ menu_item.url }}"&gt;{{ menu_item.name }}&lt;/a&gt;
+            {% if menu_item.items != empty %}
+                &lt;ul class="subnav"&gt;
+                    {% for sub_menu_item in menu_item.items %}
+                        &lt;li&gt;
+                            &lt;a href="{{sub_menu_item.url}}"&gt;{{sub_menu_item.name }}&lt;/a&gt;
+                        &lt;/li&gt;
+                    {% endfor %}
+                &lt;/ul&gt;
+            {% endif %}
+        &lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>There's nothing new here but let's step through what's going on. Firstly we do our <code>assign</code> then we loop through the <code>primary menu items</code> and output an <code>li</code> and <code>anchor</code> for each. Next we check whether the menu item we're looping over has any items within it by doing an <code>if not empty</code> test - <code>empty</code> is a handy Liquid check to see if a variable has been initialised. If so, we output another unordered list and then we loop through the sub menu items of that menu item. We then output an <code>li</code> and <code>anchor</code> for each.</p>
+
+<p>Finally we close off the <code>if</code> and <code>for loop</code> using the appropriate end Liquid statements.</p>
+
+<h2>
+<a name="the-carousel" class="anchor" href="#the-carousel"><span class="octicon octicon-link"></span></a>The carousel</h2>
+
+<p>Many agency sites and indeed portals have what we refer to as a <code>carousel</code> on their home page. This is a gallery of images with text overlays designed to give the user an attractive initial presentation and to give your site the 'wow' factor. At the time of writing, many theme developers are using full width images within their carousel as well as responsive images to cater for different viewports.</p>
+
+<p>Your first port of call is to head to the carousel section within the agency or portal admin. You can find that under <code>Website/carousel</code>. Don't worry about the settings for now but instead go straight to <code>Add item</code>. Keep the standard option selected and upload your background image, add a title, a standfirst (the chunk of accompanying text) and a link if required. The minimum you'll want is an image and standfirst.</p>
+
+<p>Now return to you theme and the <code>home/home.liquid</code> file. This is one place, and a logical one, where we can add our carousel code:</p>
+
+<pre><code>&lt;ul&gt;
+    {% for item in agency.carousel_items %}
+        &lt;li style="background-image:url({{item.image | url_for_generic_image}})"&gt;
+            &lt;div class="slide-content"&gt;
+                &lt;h2&gt;
+                    {% if item.link_url != empty %}
+                        &lt;a href="{{ item.link_url }}" class="link_url" title="{{item.title}}"&gt;
+                    {% endif %}
+                            {{item.title}}
+                    {% if item.link_url != empty %}
+                        &lt;/a&gt;
+                    {% endif %} 
+                &lt;/h2&gt;
+                &lt;p&gt;
+                    {{item.standfirst | truncate: 200}}
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>There are numerous ways you can use the carousel - some themes have a small photo box whereas others go full width with the photos. In the example above, we are going full width with our carousel image set as a background against the <code>li</code> for each carousel item using a for loop. As you can see, we check if the <code>link_url</code> is empty and if not, we wrap out title with the link URL. We then output our standfirst and in this case we truncate it to two hundred characters (more on truncate in a bit). Note that we could run a check on standfirst but here we're assuming a standfirst has been entered for each carousel item.</p>
+
+<p>Whilst we're covering the carousel and <code>home.liquid</code> it's worth pointing out that your carousel doesn't have to reside in <code>home.liquid</code>. Many front pages are split into different sections and sometimes it doesn't make sense for everything that is featured on the home page to be in home (by the way the <code>home.liquid</code> file is automatically included into the <code>{{content_for_layout}}</code> yield when on the site's root). On occasions where we want to include content on the home page but you'd rather add it to <code>application.liquid</code>, you can use the following statement:</p>
+
+<pre><code>{% if page.controller_name == 'home' %}
+    *content*
+{% endif %}
+</code></pre>
+
+<p>And for a handy reference as to what controller is being used, you can add the controller and action as a class to the body tag then inspect the source:</p>
+
+<p><code>&lt;body class="{{page.controller_name}} {{page.action_name}}"&gt;</code></p>
+
+<h2>
+<a name="the-footer" class="anchor" href="#the-footer"><span class="octicon octicon-link"></span></a>The footer</h2>
+
+<p>Again, the footer is an area where you can hardcode in your design and content, or you can manage the content using the Agent/Portal admin and the <code>content chunks</code> we have made available. <code>Content chunks</code> are well-known content areas that get used on all sites - e.g. a header, footer, sidebar and so on. If we add some content to the footer chunk we can then render it out. </p>
+
+<p>Agencies: <code>Website/Content</code><br>
+Portals: <code>Configure/Content/Pages</code></p>
+
+<p>Both content chunk sections are then on the left. Checkout the <code>Site footer</code> chunk, add some filler content for now then save it.</p>
+
+<p>Now, where you want to render the chunk in your source (if it's the footer then most likely the <code>application.liquid</code> page), use the following code:</p>
+
+<pre><code>{% content_block 'site_footer' %}
+    {% if content_block %}
+        {{content_block}}
+    {% endif %}
+{% endcontent_block %}
+</code></pre>
+
+<p>This will render your chunk. Note that you can add HTML syntax into the chunk using the MCE editor.</p>
+
+<h1>
+<a name="working-with-property-searches" class="anchor" href="#working-with-property-searches"><span class="octicon octicon-link"></span></a>Working with property searches</h1>
+
+<p>This part of the Wiki will explore how we construct the forms and display search results - arguably the most important aspect of a property search website.</p>
+
+<h2>
+<a name="constructing-a-property-search-form" class="anchor" href="#constructing-a-property-search-form"><span class="octicon octicon-link"></span></a>Constructing a property search form</h2>
+
+<p>Somewhere in your application layout file you're likely to have a property search form. There are a myriad of filter options you can show and a couple of methods of searching which we'll explore later, but for now is a basic form is below. Note we have stripped any classes or styling to keep it as simple as possible:</p>
+
+<pre><code>&lt;form action='/search' id='search' method='get' /&gt;
+    &lt;input type="radio" name="channel" value="sales" id="buy"&gt; &lt;label&gt;For Sale&lt;/label&gt;
+    &lt;input type="radio" name="channel" value="lettings" id="let"&gt; &lt;label&gt;To Let&lt;/label&gt;       
+    &lt;button onclick="Ctesius.Actions.submitSearchForm(); return false;" type="submit"&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>When the <code>Ctesius.Actions.submitSearchForm()</code> is called the system will evaluate every form on the page looking for elements with specified IDs and use them to construct a search. Here the only fields the user can select are whether it's a sales or lettings search. The results that will be shown with this type of form will be an <code>index</code> of an agency or portal's properties - this is where our <code>/properties/index.liquid</code> file comes in. More on that in the <a href="/homeflow/homeflow_api/wiki/ctesius#displaying-search-results">Displaying search results</a> section.</p>
+
+<p>Expanding on our first example, we can now add two addition fields that allow the user to type in a location. If it's recognised in our database, we'll load a number of suggested locations for the user to select. The hidden place ID field is a lookup reference for our system and is required in the source. With just two extra fields your property search will be completely supported by our geo location database:</p>
+
+<pre><code>&lt;input type='hidden' id ='place_id' name='place_id' value='{{place_id}}' /&gt;   
+&lt;input placeholder='Town or Postcode' type="text" id='location' name="location" value="{{location_field}}"/&gt;
+</code></pre>
+
+<p>Now let's add some beds and price bracket options:</p>
+
+<pre><code>&lt;select id="min_beds" name='min_beds'&gt;
+    &lt;option value="" title="Min beds"&gt;Beds min&lt;/option&gt;
+    &lt;option value="1" title="1 Bed"&gt;1 bed&lt;/option&gt;
+    &lt;option value="2" title="2 Beds"&gt;2 beds&lt;/option&gt;
+&lt;/select&gt;
+&lt;select id="max_beds" name='max_beds'&gt;
+    &lt;option value="" title="Max beds"&gt;Beds max&lt;/option&gt;
+    &lt;option value="1" title="1 Bed"&gt;1 bed&lt;/option&gt;
+    &lt;option value="2" title="2 Beds"&gt;2 beds&lt;/option&gt;
+&lt;/select&gt;
+&lt;select id="min_price" name='min_price'&gt;
+    &lt;option value="" title="Min price"&gt;Price min&lt;/option&gt;
+&lt;/select&gt; 
+&lt;select id="max_price" name='max_price'&gt;
+    &lt;option value="" title="Max price"&gt;Price max&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<p>This is probably all self-explanatory. One thing to note is that the IDs and names are important so we can process the form.</p>
+
+<p>Finally let's add a property type selector:</p>
+
+<pre><code>&lt;select id="type" name='type'&gt;
+    &lt;option value="" title="Property type"&gt;Property type&lt;/option&gt;
+    {{ agency | tag_dropdown_list }}
+&lt;/select&gt;
+</code></pre>
+
+<p>You will note a snippet of Liquid here. This code takes some pre-selected types in the Agency or Portal Admin and outputs them as options.</p>
+
+<p>If it were a portal, you would use the portal tag instead:</p>
+
+<p><code>{{ portal | tag_dropdown_list }}</code></p>
+
+<p>Another option is to simply specify the types - the names here must match what we use as type references:</p>
+
+<pre><code>&lt;option value="cottage" title="cottage"&gt;Cottage&lt;/option&gt;
+&lt;option value="farmhouse" title="farmhouse"&gt;Farmhouse&lt;/option&gt;
+&lt;option value="townhouse" title="townhouse"&gt;Townhouse&lt;/option&gt;
+</code></pre>
+
+<p>Again you can style the form and position it in anyway you choose. Let's move on and see how we deal with property search results.</p>
+
+<h2>
+<a name="displaying-search-results" class="anchor" href="#displaying-search-results"><span class="octicon octicon-link"></span></a>Displaying search results</h2>
+
+<p>After the form has been submitted, Ctesius and Hestia will go off an fetch the results - normally ten per page though this is configurable. A JSON response is returned and Liquid loops through and displays the results.</p>
+
+<p>The first file we will want to get up and running is the <code>properties/index.liquid</code> file, which is located in the <code>properties</code> folder. The index displays every property belonging to an agency or portal. All searches are channel based so an index could show all sales or all lettings. On the whole the index will check whether the <code>properties</code> JSON is empty and if not, it will then include a <code>_results.liquid</code> partial, which is the main body of code that we'll be working with.</p>
+
+<p>So the code could look something like this:</p>
+
+<pre><code>{% if properties == empty %}    
+    &lt;h4&gt;Sorry, we couldn't find any properties for this search.&lt;/h4&gt;
+{% else %}
+    {% include 'search/results' %}
+{% endif %}
+</code></pre>
+
+<p>Note that in our example above we've put our <code>results</code> partial in a <code>search</code> sub-folder. You don't have to do this and your <code>results</code> partial could reside in the <code>properties</code> folder if you wish.</p>
+
+<p>Our <code>results</code> partial will probably include top and bottom pagination, top and/or bottom search statistics, alternative view types (list, map, grid, etc) and of course the Liquid loop that displays the properties. Note that one, more or indeed all of the above can be partials so we can re-use them if necessary.</p>
+
+<h2>
+<a name="the-properties-loop" class="anchor" href="#the-properties-loop"><span class="octicon octicon-link"></span></a>The properties loop</h2>
+
+<p>Since Liquid for loops can include a partial for each property it makes sense to include a tried, tested and mananageble partial of code for each property. We refer to this partial as <code>_property_small.liquid</code>. </p>
+
+<p>Here's what our for loop looks like:</p>
+
+<pre><code>{% for property in properties %}
+    {% include "properties/property_small" %}
+{% endfor %}
+</code></pre>
+
+<p>As you can see we loop through the properties array and include the <code>_property_small</code> partial for each one. Let's now take a look at what a sample <code>_property_small.liquid</code> could look like:</p>
+
+<pre><code>&lt;div id="property_{{property.property_id}}" class="property-small"&gt;
+    {{ property | photo_overlay }}
+    &lt;a href="{{property | url_for_property}}"&gt;
+        &lt;img src="{{ property.photos.first | url_for_property_asset: "176x133" }}"&gt;
+    &lt;/a&gt;
+    &lt;a href="{{property | url_for_property}}"&gt;
+        {{property.display_address | truncate : 60}}
+    &lt;/a&gt;
+    &lt;p&gt;{{property.price}}&lt;/p&gt;
+    &lt;p&gt;{{property.short_description | truncate : 185}}&lt;/p&gt;
+    &lt;p&gt;&lt;a href="{{property | url_for_property}}"&gt;Full details&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Let's step through this. As you can see, we need to wrap each set of results in an ID or class container and we'll need to style up the elements so it renders nicely on a row. We'll assume you are okay with that and explain the Liquid. </p>
+
+<p>Firstly, the ID of the div is <code>property_{{property.property_id}}</code>. As you can imagine, every property in our system gets assigned a numerical ID, and it's this ID that's used in URL and for other functions on the theme and in the backend. For now, we've outputted the ID so we can use our <code>Save to shortlist</code> function - more on that later.</p>
+
+<p>The next tag <code>{{ property | photo_overlay }}</code> outputs the property status in the form of a sash image banner, or a custom banner of your choice. You can get to this custom images section via your agency or portal admin with the following link: <code>/configure/website/appearance/custom_images</code>.</p>
+
+<p>The next piece of Liquid is: <code>{{ property.photos.first | url_for_property_asset: "176x133" }}</code>. As you might imagine, this looks at the photos array and gets the link of the first one for use in the image source. We then use the <code>url_for_property_asset</code> key and we pass in a size in pixels. As mentioned before, Liquid will resize the image on the server and send it to the browser.</p>
+
+<p>A tag that's used numerous times in this code, as well as on many of the property related pages; <code>{{property | url_for_property}}</code> outputs the relative address to the property in question.</p>
+
+<p>The next tag is <code>{{property.display_address | truncate : 60}}</code>. This tag outputs the display address of the property, which is the address as it comes in from the agency or portal feeds. A new arguement seen here is <code>truncate</code>. This is a very useful Liquid function, which is particularly useful when curtailing long addresses, descriptions and so on - just pass in the number of characters you want to keep. Another useful truncate function is <code>truncatewords: 20</code>. This does what it says on the tin.</p>
+
+<h2>
+<a name="handling-locations-and-postcodes" class="anchor" href="#handling-locations-and-postcodes"><span class="octicon octicon-link"></span></a>Handling locations and postcodes</h2>
+
+<p>So far we have a basic properties index page and hopefully a set of results using the properties loop. How then, do we deal with locations like counties and towns as well as postcodes? This is where our include partial <code>search/_results.liquid</code> comes into its own. All we need to do is add three subfolders in the root directory: <code>locations</code>, <code>counties</code> and <code>postcodes</code>. Within these folders we simply need a <code>show.liquid</code> file and inside this file we add <code>{% include 'search/results' %}</code>. This will use our search results partial for the location searches - great. W now need to do now is make sure our page headings reflect the search that has been carried out. We may as well look at pagination whilst we're at it, too...</p>
+
+<h2>
+<a name="headings-and-pagination" class="anchor" href="#headings-and-pagination"><span class="octicon octicon-link"></span></a>Headings and pagination</h2>
+
+<p>Headings need to reflect the search the user has carried out or it should output a very general statement if it's an index search. There's other considerations here; for instance if it is a county or postcode seach and so on. Some developers choose to add pagination statistics and pagination navigation together with search and location information, whereas others choose to seperate the two - you are free to find whatever suits you/your client. Note that the code below would be in  <code>search/_results.liquid</code>. Here's an example heading:</p>
+
+<pre><code>&lt;h1&gt;
+    {{search.dictionary.general_collective | capitalize}} 
+    {{search.dictionary.preposition}} 
+    {% if location %}in {{location.name}}{% endif %}
+&lt;/h1&gt;
+</code></pre>
+
+<p>This could output something like: </p>
+
+<p><code>Houses for sale in Walton on Thames</code></p>
+
+<p>The <code>general_collective</code> is the property type, the <code>preposition</code> is the channel (sales or lettings) and finally we do a <code>location</code> test and output the <code>in</code> and <code>{{location.name}}</code> if it comes back as true. Let's look at another example:</p>
+
+<pre><code>{{pagination.from_record}} to {{pagination.to_record}} of {{pagination.total_count}} 
+Properties found 
+{% if location %} 
+    in {{location.name}}
+{% endif %}
+{% if pagination.has_prev_page %}
+    | &lt;a href="{{pagination.previous_page_link}}" class="pagination_prev"&gt;
+        Previous {{pagination.page_size}}
+      &lt;/a&gt;
+{% endif %}
+{% if pagination.has_next_page %}
+    | &lt;a href="{{pagination.next_page_link}}" class="pagination_next"&gt;
+        Next {{pagination.page_size}}
+      &lt;/a&gt;
+{% endif %}
+</code></pre>
+
+<p>This might output something like: </p>
+
+<p><code>1 to 12 of 31 Properties found in Walton on Thames | Next 12</code></p>
+
+<p>This example starts with the <code>from_record</code> - if your page size is ten (which is the default) then this will go <code>1</code>, <code>11</code>, <code>21</code> etc. We then output the <code>to_record</code>, which again, if we're going up in tens, this would be <code>10</code>, <code>20</code>, <code>30</code> etc. We then output <code>{{pagination.total_count}}</code>, which outputs the item count. </p>
+
+<p>Our next segment of code is two if statements that will output next and previous buttons or links if they are required. As you can see, we can get the next and previous links using the appropriate Liquid syntax as well as a handle on the page size, which is most likely going to be ten, but could be twelve, fourteen or whatever you or your client requires.</p>
+
+<h2>
+<a name="more-on-pagination" class="anchor" href="#more-on-pagination"><span class="octicon octicon-link"></span></a>More on pagination</h2>
+
+<p>Ctesius ships with a <code>for pagination</code> function. If you've ever used Google before, and let's face it, who hasn't, then you'll be familiar with the pages before and after pagination they utilise at the foot of the search results.</p>
+
+<p>This function takes a couple of arguements: <code>previous</code> and <code>after</code>.</p>
+
+<p>These arguements allow you to define how many trailing and remaining pages to show. Here's the code:</p>
+
+<pre><code> {% unless pagination.page_count == 1 %}
+    &lt;ul&gt;
+        {% if pagination.has_prev_page %}
+            {% if pagination.page_count &gt; 2 %}
+               &lt;li&gt;&lt;a href='{{pagination.first_page_link}}'&gt;&amp;lt; First&lt;/a&gt;&lt;/li&gt;
+            {% endif %}
+        {% endif %}
+        {% for_pagination pagination previous: 4 after : 4 %}
+            &lt;li&gt;
+                &lt;a href="{% if pagination_item.page_number == pagination.current_page %}#
+                {% else %}{{pagination_item.link}}{% endif %}" 
+                {% if pagination_item.page_number == pagination.current_page %} class='s'{% endif %}&gt;
+                {{pagination_item.page_number}}&lt;/a&gt;
+            &lt;/li&gt;
+        {% endfor_pagination %}
+        {% if pagination.has_next_page and pagination.current_page != pagination.page_count %}
+            {% if pagination.page_count &gt; 2 %}
+                &lt;li&gt;
+                    &lt;a href='{{pagination.last_page_link}}'&gt;Last &amp;gt;&lt;/a&gt;
+                &lt;/li&gt;
+            {% endif %}
+        {% endif %}
+    &lt;/ul&gt;    
+{% endunless %}
+</code></pre>
+
+<p>We start with the first <code>unless</code> statement we've seen. The <code>unless</code> statement will continue to output the code between the tags unless a certain condition is met. Here if page count is one, then we don't want to try and output the whole for block (incidentally this could be changed to an <code>if/else</code> and we could output the first page number to signify there's only one page). Next we use a couple of statments we've already seen and a Liquid tag we've not - <code>{{pagination.first_page_link}}</code> outputs the first page link.</p>
+
+<p>Next we get into our for loop. First we give it a reference and then <code>previous: 4 after : 4</code>, meaning we want four trailing pages and four forthcoming pages (if they're available). The body of the for loop outputs the appropriate <code>li anchor</code> code for each. The final block in this code does a couple of checks to make sure there's pages remaining before outputting a helper <code>last</code> page link. We then close off our if statements and unless statements in the usual way.</p>
+
+<h2>
+<a name="togglable-areas" class="anchor" href="#togglable-areas"><span class="octicon octicon-link"></span></a>Togglable areas</h2>
+
+<p>The core <code>application javascript include</code> comes with a JavaScript toggle system that can show and hide different <code>tabs</code> on a click. This is useful when working with different views and, as we will see later, it is also very useful on the <code>property show</code> page.</p>
+
+<p>There are at least three well defined view types for the results page. They are <code>list</code>, <code>grid</code> and <code>map</code>. Here's what the code might look like:</p>
+
+<pre><code>&lt;div id='togglable_list' class='togglable_area'&gt;
+    {% include 'properties/properties_list' %}
+&lt;/div&gt;
+&lt;div id="properties_grid_toggle_view" class="hidden togglable_area"&gt;
+    {% include 'properties/properties_grid' %}
+&lt;/div&gt;
+&lt;div id='togglable_map' class='togglable_area hidden'&gt;
+    {% include 'properties/pagination_for_map' %}
+    &lt;div id='draggable_map_view'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Then to link to the views, we simply use the hash reference in the anchor like so:</p>
+
+<pre><code>&lt;li&gt;&lt;a href="#home" class="active"&gt;LIST&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#grid"&gt;GRID&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#map"&gt;MAP&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+
+<p>Note that <code>#home</code> correlates to the default list view.</p>
+
+<h2>
+<a name="working-with-the-map-view" class="anchor" href="#working-with-the-map-view"><span class="octicon octicon-link"></span></a>Working with the map view</h2>
+
+<p>Ctesius comes loaded with maps for property results, individual properties, branches and so on. A draggable map is at your disposal for property results. The draggable map view can be placed on the map tab outlined above and can also update the property results on the fly based on the user dragging or zooming. To get the map up and running, all you need to do is add the <code>draggable_map_view</code> div to your tab and supply it with a height and a width in your CSS:</p>
+
+<p><code>&lt;div id='draggable_map_view'&gt;&lt;/div&gt;</code></p>
+
+<p>Given that we're allowing the user to zoom and drag, it would be useful to have a dialogue of the current properties that are on display. It would also be useful to update this when the user interacts with the map. With Ctesius's built in event system, we can do just that.</p>
+
+<p>Above the <code>draggable_map_view</code> div, you will see we have an include for map pagination. This is where we can add any map related dialogue we have. In our example below it's actually very little:</p>
+
+<pre><code>&lt;span id='map_info'&gt;&lt;/span&gt;
+{% include 'properties/pagination_links' %}
+</code></pre>
+
+<p>Here we have an empty div ready to be populated with our dynamic map information and we have a partial to include the list, grid and map links that are common to all of the views. All we need to add to get the map information is two <code>Ctesius events</code>:</p>
+
+<pre><code>&lt;script&gt;
+  Ctesius.registerEvent('before_draggable_map_updated',function(){
+     $('#map_info').html('Updating map...')
+  });
+
+  Ctesius.registerEvent('draggable_map_updated',function(res){
+     $('#map_info').html('Showing ' + res.properties.length + ' of ' + res.pagination.total_count + ' properties. Zoom in or drag the map to see more.' )
+  });
+&lt;/script&gt;
+</code></pre>
+
+<p>Ctesius <code>kicks</code> events throughout the execution of a theme that we can conveniently get a handle on and perform some kind of action. In our example above, we register a callback function to execute when our draggable map events are kicked. By doing this we can add some nice feedback to the user. You can add these functions anywhere you like though many developers add them to the <code>js_event_registers</code> partial, which resides in the <code>layouts</code> folder.</p>
+
+<h2>
+<a name="working-with-grid-views" class="anchor" href="#working-with-grid-views"><span class="octicon octicon-link"></span></a>Working with grid views</h2>
+
+<p>At the time of writing many agencies are integrating grid views into their property results. Grid views can sometimes produce a better visual offering than traditional list views and of course offers the user a degree of presentation flexibility. The easiest way to get up and running with a grid view is to have a <code>properties_grid</code> partial. Within this partial there is a second properties loop:</p>
+
+<pre><code>% for property in properties %}
+    {% include 'properties/property_grid' %}
+{% endfor %}
+</code></pre>
+
+<p>The partial <code>property_grid</code> then contains your individual grid view syntax. Since we're running another properties loop you might be forgiven to thinking we're fetching the properties again. Actually what we're doing is processing the same JSON that was returned from list view, so there is little or no overhead.</p>
+
+<h2>
+<a name="saving-properties-to-a-shortlist" class="anchor" href="#saving-properties-to-a-shortlist"><span class="octicon octicon-link"></span></a>Saving properties to a shortlist</h2>
+
+<p>A common feature on property websites is saving properties to a semi or permanent storage with the appropriate widgets to link to or add/remove properties as the user sees fit. This kind of function is extremely useful on portals, but is also a nice feature for agencies to have. </p>
+
+<p>Our first port of call is to use our first <code>override</code> partial so far. An override is simply a partial well-known to Ctesius that's in the <code>core</code> app ready for use. Sometimes core files can be used without needing to override them but in this instance we'll assume you want to modify the layout or at least have a degree of control over the partial.</p>
+
+<p>In your <code>js_templates</code> folder, add the partial <code>_saved_properties.liquid</code>. In it we need a couple of constructs, the first is:</p>
+
+<pre><code>{% raw %}
+    &lt;script id="saved_properties_template" type="text/liquid"&gt;
+        &lt;div class="content box"&gt;
+          &lt;h3&gt;My property shortlist&lt;/h3&gt;
+          &lt;div class="shortlist_inner"&gt;
+              &lt;div id="property_shortlist" class="content-block"&gt; 
+                  &lt;div id='favourite_property_list' class="content"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/script&gt;
+</code></pre>
+
+<p>Essentially this is our widget container. Here's the next construct:</p>
+
+<pre><code>    &lt;script id="saved_property_template" type="text/liquid"&gt;
+        &lt;div id="mini_property_{{property.property_id}}" class="mini_property mini_property_{{property.property_id}}"&gt;
+            &lt;div style="position:relative;" class="clearfix"&gt;
+                &lt;img src="/liquid_assets/images/delete.png" style="display: none;" id="remove_icon_{{property.property_id}}"
+                    class="remove_icon" onclick="javascript:Ctesius.Actions.removeSavedProperty({{property.property_id}})"&gt;
+                &lt;a href="{{property.property_url}}"&gt;&lt;img src="{{ property.small_photo }}" class="shortlist_img"&gt;&lt;/a&gt;
+                &lt;div class="featured_property_data"&gt;     
+                    &lt;a href="{{property.property_url}}"&gt;{{ property.bedrooms }} bedrooms&lt;/a&gt;&lt;br /&gt;
+                    &lt;a href="{{property.property_url}}"&gt;{{ property.price }}&lt;/a&gt;&lt;br /&gt;
+                    &lt;a href="{{property.property_url}}"&gt;{{ property.road_name | truncate : 20 }}&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/script&gt;
+{% endraw %}
+</code></pre>
+
+<p>This construct is the actual saved property record within the widget.</p>
+
+<p>There's quite a lot here to digest but most of it we have touched on previously in the Wiki. The <code>raw</code> tag however, is one we haven't seen so far. Anything within the raw tag is ignored by the Liquid serverside parser. Instead it's sent back to the browser for (in our case) the application JavaScript to process. As you can see we output the property's ID in various places so we can get a handle on it.</p>
+
+<p>Next we need to allow our widget to show up somewhere in your theme - typically a sidebar. Add the following code whereever you would like it to show: </p>
+
+<p><code>&lt;div id="saved_properties_view" class="hidden"&gt;&lt;/div&gt;</code>. </p>
+
+<p>This will render the results of the script code seen above within the <code>saved_properties_view</code> div tags.</p>
+
+<p>Next we need to output a save button or link on each property. To do that we add the following code to our <code>_property_small.liquid</code> that we worked with earlier in the Wiki (and the grid view if you have one):</p>
+
+<pre><code>&lt;a class="shortlist_link_{{ property.property_id }}" 
+onclick="Ctesius.Actions.addSavedProperty({{property.property_id}}); return false;"&gt;
+    Add to Shortlist
+&lt;/a&gt;
+</code></pre>
+
+<p>The new code here is the <code>Ctesius addSavedProperty action</code> - essentially this saves the JSON representation of property's information to the browser's local storage for retrieval as and when required. It is now close to working but there's some events we need to add to <code>js_event_registers</code> to stitch it all together. The first is in an event to do some stuff when the view is rendered (i.e. when the user clicks the add button):</p>
+
+<pre><code>Ctesius.registerEvent('saved_property_view_rendered', function(saved_property){
+    $('#saved_properties_view').removeClass("hidden");
+    $(".shortlist_link_"+saved_property.id).html("Remove from Shortlist");
+    $(".shortlist_link_"+saved_property.id).attr("onclick", 'Ctesius.Actions.removeSavedProperty('+saved_property.id+'); return false;');
+    $('#mini_property_'+saved_property.id).mouseenter(function(){$('#remove_icon_'+saved_property.id).show()});
+    $('#mini_property_'+saved_property.id).mouseleave(function(){$('#remove_icon_'+saved_property.id).hide()});
+});
+</code></pre>
+
+<p>Firstly we remove the hidden class from our sidebar widget so it shows. We then target the link, change the HTML to <code>Remove from Shortlist</code> then we add a click event to remove the very same property. Our last two lines are jQuery callback functions that show or hide the visual aid signifiying the user can remove the property.</p>
+
+<h2>
+<a name="saving-searches" class="anchor" href="#saving-searches"><span class="octicon octicon-link"></span></a>Saving searches</h2>
+
+<p>Saving searches is a tad quicker and easier to set up than the saved properties and they save in much the same way as the saved properties. They also make use of the events system to give the user some feedback. Here's the first bit of code you will need to add where you would like the link/button:</p>
+
+<pre><code>{% if location %}
+    &lt;li&gt;&lt;a onclick="Ctesius.Actions.saveCurrentSearch();" id="save_search"&gt;SAVE SEARCH&lt;/a&gt;&lt;/li&gt;
+{% endif %}
+</code></pre>
+
+<p>Here you can see we have wrapped the link in a location if statement. You don't <em>have</em> to do this, though a saved search and the resultant email alerts to the user might not be very useful if the properties are not where they want to live or the location where they searched. Much like the saved properties function, here we call <code>saveCurrentSearch()</code>. We also give the link an ID so we can grab it in context using our events. </p>
+
+<p>Speaking of events, here's the two we'll need to provide the user with some feedback:</p>
+
+<pre><code>Ctesius.registerEvent('saved_search_added', function(search, collection){
+    if (search.equalTo(Ctesius.getSearch())){
+        $('#save_search').html('REMOVE SEARCH');
+        $("#save_search").attr("onClick", 'Ctesius.Actions.removeSavedSearch("'+search.search_id()+'");')
+    }
+
+    $('#saved_searches_link').effect('highlight',{color: '{{theme_preferences.accent_colour}}'}, 3000);
+});
+
+Ctesius.registerEvent('saved_search_removed', function(search, collection){
+    if (search.equalTo(Ctesius.getSearch())){
+        $("#save_search").html("SAVE SEARCH")
+        $("#save_search").attr("onclick", 'Ctesius.Actions.saveCurrentSearch();')
+    }
+});
+</code></pre>
+
+<p>Again we're calling some Ctesius functions that will add or remove the saved search accordingly. We then set the display of the link and add the <code>onclick</code> events as needed. There's a couple of new statements used in this code that are worth a look:</p>
+
+<p><code>$('#saved_searches_link').effect('highlight',{color: '{{theme_preferences.accent_colour}}'}, 3000);</code></p>
+
+<p>The first is more a concept than anything else - the events that we can get a handle on are not only good for adding and removing properties, searches etc, but can also be used to provide visual aids to the user. Here the <code>saved_searches_link</code> in the user profile header (more on this later) is highlighted and then fades out to show the user that the search was saved and can be viewed/amended in their control panel.</p>
+
+<p>The other new Liquid tag is <code>{{theme_preferences.accent_colour}}</code>.</p>
+
+<p>Earlier we mentioned that LCSS files are run through a Liquid filter. If you're building a theme that will be rolled out to multiple agencies, or if you want to standardise the colour palette and manage it in one place, you can use the <code>agency/portal admin</code> to set the colours, then pull them out in Liquid using tags similar to the one above. </p>
+
+<h1>
+<a name="draw-a-map" class="anchor" href="#draw-a-map"><span class="octicon octicon-link"></span></a>Draw a Map</h1>
+
+<p><em>Coming soon</em></p>
+
+<h1>
+<a name="the-property-show-page" class="anchor" href="#the-property-show-page"><span class="octicon octicon-link"></span></a>The property show page</h1>
+
+<h2>
+<a name="outputting-basic-information" class="anchor" href="#outputting-basic-information"><span class="octicon octicon-link"></span></a>Outputting basic information</h2>
+
+<p>Many of the concepts we have used on the results partial, property small and elsewhere in the Wiki get used on the property show page as well. The goal of the show page is to show all of the property's photos, videos, its full description, floor plans, brochures, Energy Performance Certificates (EPC) and its location on a map (including a Street view), then channel all of this into a telephone or email lead to the agency.</p>
+
+<p>Your first requirement is likely to be an output of the property's address, or at least part of it, and its price in a title:</p>
+
+<pre><code>&lt;h1&gt;{{property.display_address}}&lt;/h1&gt;
+&lt;h2&gt;{{property.price}}&lt;/h2&gt;
+</code></pre>
+
+<p>Next you will probably want to output the photos of the property. Many developers use jQuery type photo sliders for displaying and navigating through the photos. Thankfully, by using the photos loop, this is relatively easy to achieve:</p>
+
+<pre><code>{% for photo in property.photos %}
+    &lt;img src="{{ photo | url_for_property_photo : "410x308"}}" height="308" width="410" /&gt;
+{% endfor %}
+</code></pre>
+
+<p>And if you just wanted the property's main photo:</p>
+
+<pre><code>&lt;img src="{{property.main_photo | url_for_property_photo : "410x308"}}" height="308" width="410" /&gt;
+</code></pre>
+
+<p>Next we might want to output the short description for the property:</p>
+
+<pre><code>{{property.short_description | truncate: 900}}
+</code></pre>
+
+<p>Then, to get the property's status (Sold, Let, etc), we can use:</p>
+
+<pre><code>&lt;h4&gt;{{property.status}}&lt;/h4&gt;
+</code></pre>
+
+<h2>
+<a name="other-property-drops" class="anchor" href="#other-property-drops"><span class="octicon octicon-link"></span></a>Other property drops</h2>
+
+<pre><code>{{property.available_on}}
+</code></pre>
+
+<p>If supplied, the date the property is available.</p>
+
+<pre><code>{% for feature in property.features %}
+    {{ feature }}
+{% endfor %}
+</code></pre>
+
+<p>A list of property features that can be outputted to bullet points.</p>
+
+<p><code>{{property.description}}</code></p>
+
+<p>The full description.</p>
+
+<p><code>{{property.road_name}}</code></p>
+
+<p>The property's road name.</p>
+
+<p><code>{{ property.vox_number }}</code></p>
+
+<p>Homeflow is able to generate recorded telephone numbers for properties. Doing a check on this drop can see whether one is available.</p>
+
+<p><code>{{property.bedrooms}}</code></p>
+
+<p>A numerical figure that sometimes comes in as zero or empty so needs to be checked.</p>
+
+<p><code>{{property.bathrooms}}</code></p>
+
+<p>As above.</p>
+
+<p><code>{{property.reception_rooms}}</code></p>
+
+<p>As per bedrooms.</p>
+
+<p><code>{{property.property_ref}}</code></p>
+
+<p>The agent's supplied property reference.</p>
+
+<pre><code>{% for floorplan in property.floorplans %}
+    {% if forloop.first %}
+        &lt;a href="http://mr0.homeflow.co.uk/{{ floorplan.image }}" title="Floor plan"&gt;
+            {% if property.floorplans.size == 1 %}
+                View floor plan
+            {% else %}
+                View floor plans
+            {% endif %}
+        &lt;/a&gt;
+    {% else %}
+        &lt;a href="http://mr0.homeflow.co.uk/{{ floorplan.image }}" style="display:none;" title="Floor plan"&gt;&lt;/a&gt;
+    {% endif %}
+{% endfor %}
+</code></pre>
+
+<p>The collection of floor plans. This loop could output the floor plans to a light box e.g Fancybox, Colorbox, etc.</p>
+
+<pre><code>{% for brochure in property.brochures %}
+   &lt;li&gt;&lt;a href="{{ brochure | url_for_property_asset }}"&gt;Download brochure&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+</code></pre>
+
+<p>This for loop would output all the brochures supplied.</p>
+
+<pre><code>{% for epc_chart in property.epc_charts %}
+    {% if forloop.first %}
+        &lt;a href="{{ epc_chart | url_for_property_asset }}"&gt;
+            {% if property.epc_charts.size == 1 %}
+                View EPC chart
+            {% else %}
+                View EPC charts
+            {% endif %}
+        &lt;/a&gt;
+    {% else %}
+        &lt;a href="{{ epc_chart | url_for_property_asset }}" style="display:none"&gt;&lt;/a&gt;
+    {% endif %}
+{% endfor %}
+</code></pre>
+
+<p>As per above and floor plans.</p>
+
+<h2>
+<a name="working-with-maps" class="anchor" href="#working-with-maps"><span class="octicon octicon-link"></span></a>Working with maps</h2>
+
+<p>Many developers employ the tabbing system for property maps so the user can cycle through the different types: road, streetview and satellite. The first requirement is some events:</p>
+
+<pre><code>&lt;script&gt;
+    Ctesius.addConfig('small_map_element', 'contact_map')
+    Ctesius.registerEvent('render_tab', function(tab_name){
+        switch(tab_name){
+        case 'streetview':
+            {% gmap_for property as streetview in streetview %}
+        break;
+        case 'satellite':
+            {% gmap_for property as satellite in satellite %}
+        break;
+        }
+    });
+&lt;/script&gt;
+</code></pre>
+
+<p>The first line here adds our map to the <code>contact_map</code> ID or class (seen below). The <code>render_tab</code> event registers a callback function that renders the appropriate Google map depending on the tab clicked. We then have our anchors and togglable areas:</p>
+
+<pre><code>&lt;a class="selected" id="tab_map" href="#tabs/map"&gt;MAP&lt;/a&gt;
+&lt;a id="tab_streetview" href="#tabs/streetview"&gt;STREETVIEW&lt;/a&gt;
+&lt;a id="tab_satellite" href="#tabs/satellite"&gt;SATELLITE&lt;/a&gt;
+</code></pre>
+
+<pre><code>&lt;div id="togglable_map" class="togglable_area"&gt;
+    &lt;div id="contact_map"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="togglable_streetview" class="togglable_area hidden"&gt;
+    &lt;div id='streetview' class="google_map_container"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="togglable_satellite" class="togglable_area hidden"&gt;
+    &lt;div id='satellite' class="google_map_container"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>
+<a name="submitting-a-lead" class="anchor" href="#submitting-a-lead"><span class="octicon octicon-link"></span></a>Submitting a lead</h2>
+
+<p>Email type leads are submitted to Homeflow and then on to the agent by ubiquitous web forms. Here's a simplified version:</p>
+
+<pre><code> &lt;form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" method="post"&gt;
+    &lt;div id='form_error'&gt;&lt;/div&gt;
+    &lt;label class="text" for="firstname"&gt;First name&lt;/label&gt;
+        &lt;input id="firstname" name="lead_client[first_name]" type="text"&gt;
+    &lt;label class="text" for="surname"&gt;Last name&lt;/label&gt;
+        &lt;input id="surname" name="lead_client[last_name]" type="text"&gt;
+    &lt;label class="text" for="email"&gt;Email&lt;/label&gt;
+        &lt;input id="email" name="lead_client[email]" type="email"&gt;
+    &lt;label class="text" for="telephone"&gt;Telephone&lt;/label&gt;
+        &lt;input id="telephone" name="lead_client[tel_home]" type="text"&gt;
+    &lt;label class="text" for="message"&gt;Message&lt;/label&gt;
+        &lt;textarea id="message" name="lead[message]" rows="3"&gt;&lt;/textarea&gt;
+    &lt;button type="submit"&gt;Send enquiry&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>If you are familiar with forms, which we're sure you are, there will be nothing new here to you. The only requirements are the names of the fields as well as the form action. The form error div near the top is reserved for any lead sending errors. Once a lead is sent, a <code>flash message</code> can be displayed. We have a whole array of flash notices that are used depending on the response back from the server and to display the notices, all you need to do is and the alert location div to your <code>application.liquid</code> or on the subject page itself:</p>
+
+<pre><code>&lt;div id='alert_location'&gt;&lt;/div&gt;
+</code></pre>
+
+<h1>
+<a name="working-with-agencies" class="anchor" href="#working-with-agencies"><span class="octicon octicon-link"></span></a>Working with agencies</h1>
+
+<p>More commonly found on portals, the agency page acts as the top level holdall for the agency's branches, staff, contact details and so on. The Ctesius app comes with a URL pattern that can describe the agency, the branch and the staff, should you need it to. Let's look at what a typical agency page might contain.</p>
+
+<h2>
+<a name="the-agency-show-page" class="anchor" href="#the-agency-show-page"><span class="octicon octicon-link"></span></a>The agency show page</h2>
+
+<p>Anything agency related will reside in the <code>agencies</code> folder in your Rails directory structure and your show page will follow the normal format of <code>show.liquid</code>. Let's start to build the page using the agency name, agency description and the agency's portal logo with a fallback to their default logo:</p>
+
+<pre><code>&lt;h1&gt;{{agency.name}}&lt;/h1&gt;
+</code></pre>
+
+<pre><code>{% if agency.portal_logo %}
+    &lt;img src="{{agency.portal_logo | url_for_agency_logo : "200x_"}}" /&gt;
+{% elsif agency.logo %}
+    &lt;img src="{{agency.logo | url_for_agency_logo : "200x_"}}" /&gt;
+{% endif %}
+</code></pre>
+
+<pre><code>{{agency.description}}
+</code></pre>
+
+<p>Next, let's add a Google style map to our show page - note that this will show the branches belonging to an agency:</p>
+
+<pre><code>&lt;div id='agency_map'&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code>&lt;script&gt;
+    {% gmap_for agency.branches as roadmap in agency_map %}
+&lt;/script&gt;
+</code></pre>
+
+<p>Don't forget to give your map div a height and a width setting in your CSS. </p>
+
+<p>If you would prefer to use a Leaflet style map:</p>
+
+<pre><code>&lt;div id='branches_map'&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+  Ctesius.addConfig('branch_map_element', 'branches_map');
+  Ctesius.addConfig('branches', {% include_as_json branches/branches_list %});
+&lt;/script&gt;
+</code></pre>
+
+<p>Now let's extract the branches of an agency, including their branch pic or logo, description etc:</p>
+
+<pre><code>{% for branch in agency.branches_ordered_alphanumerically %}
+    {% include "branches/branch_small" %}
+{% endfor %}
+</code></pre>
+
+<p>Note that we're ordering the branches alphabetically using a helper function and we're reusing our <code>branch_small</code>. Not only is this excellent reuse, but it means if your branch_small layout is sorted, it should work out of the box on you agencies pages. In addition, when you need to make a change to it, it will be reflected on all pages that use it.</p>
+
+<p>Finally, let's see how we can extract some social media links from the CRM:</p>
+
+<pre><code>{% if agency.has_social_links %}
+    &lt;div class="agency_social"&gt;
+        {% if agency.facebook_uri %}
+            &lt;a href="{{agency.facebook_uri }}" target="_blank"&gt;&lt;img src="{{'facebook' | theme_image_url}}" width="32" height="32"&gt;&lt;/a&gt;
+        {% endif %}
+        {% if agency.twitter_uri %}
+            &lt;a href="{{agency.twitter_uri }}" target="_blank"&gt;&lt;img src="{{'twitter' | theme_image_url}}" width="32" height="32"&gt;&lt;/a&gt;
+        {% endif %}
+        {% if agency.linkedin_uri %}
+            &lt;a href="{{agency.linkedin_uri }}" target="_blank"&gt;&lt;img src="{{'linkedin' | theme_image_url}}" width="32" height="32"&gt;&lt;/a&gt;
+        {% endif %}
+        {% if agency.googleplus_uri %}
+            &lt;a href="{{agency.googleplus_uri }}" target="_blank"&gt;&lt;img src="{{'google-plus' | theme_image_url}}" width="32" height="32"&gt;&lt;/a&gt;
+        {% endif %}
+    &lt;/div&gt;
+{% endif %}
+</code></pre>
+
+<p>This block of code first executes a <code>has_social_links</code> function - this checks whether any one of the standard social media slots has a value. If at least one does, it will execute the block. We then use individual agency drop checks to see if the URI is available and output a theme image linking to the URI if so.</p>
+
+<h1>
+<a name="working-with-branches" class="anchor" href="#working-with-branches"><span class="octicon octicon-link"></span></a>Working with branches</h1>
+
+<p>Way back at beginning of the Wiki we outlined the Rails folder structure we must use in order to retrieve property, agency, branch information and so on. To retrieve everything related to a branch, to perform branch searches and generally build the template up, we need to work in our <code>branches</code> folder. Let's start with the index file.</p>
+
+<h2>
+<a name="the-branches-index" class="anchor" href="#the-branches-index"><span class="octicon octicon-link"></span></a>The branches index</h2>
+
+<p>As we saw with the <code>properties index</code>, our index pages are called when no seach criteria is given and we just want a flat list of all properties, branches, etc. A branches index route would simply be: <code>http://www.agency_domain.com/branches</code>. On our index page we can add the following code:</p>
+
+<pre><code>{% if branches != empty %}
+    {% for branch in branches %}
+        {% include "branches/branch_small" %}
+    {% endfor %}
+{% endif %}
+</code></pre>
+
+<p>This construct is exactly the same as a properties loop seen before except we are referencing our branches collection as well as including a <code>branch_small</code> partial for each returned branch. A <code>branch_small</code> might look something like:</p>
+
+<pre><code>&lt;div class="branch"&gt;
+    {% if branch.agency.portal_logo %}
+        &lt;img src="{{ branch.agency.portal_logo | url_for_agency_logo : "150!" }}" /&gt;
+    {% else %}
+        &lt;img src="{{ 'awaiting-image.png' | theme_image_url }}" /&gt;
+    {% endif %} 
+    &lt;div class="details"&gt;
+        &lt;h3&gt;
+            &lt;a href="{{ branch | url_for_branch}}"&gt;{{branch.name}} branch&lt;/a&gt;
+        &lt;/h3&gt;
+        &lt;p class="content"&gt;
+            {{branch.description | strip_tags | truncate : 250}}
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;a href="{{ branch | url_for_branch}}"&gt;More Information&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Here we are checking whether the agency's portal logo has been set and if it has, we output it in the source. Note you could use <code>{{ branch.photo | url_for_generic_image: "150!" }}</code> instead, which would retrieve the branch photo as set in the branches area of the agency or portal admin. This photo is normally a shop front image or something similar. As another alternative, you could use the overall agency logo: <code>{{ agency.logo | url_for_agency_logo : '150!'}}</code>. Note that we've got a backup coded in to output a standard holding image if no portal logo is available. This is a <code>theme_image_url</code> - you may remember theme images reside in <code>/assets/images</code>.</p>
+
+<p>One new element here is the bang (explanation mark) after the width dimension. We've built in some nifty Liquid filters that give you some flexiblity when requesting images from the server. In this instance we're saying: get us the agency portal logo and resize it so the width and height are no more than 150 pixels. Other options here are to specify the dimensions exactly or specify a height or a width, then get Liquid to automatically set the other dimension whilst retaining the aspect ratio - we do this by using an underscore where the dimension you want to calculate would normally be, e.g: "150x_".</p>
+
+<p>Next we're outputting the branch name and wrapping it in the URL for the branch. We then go on to output the branch description. Note that in some instances you might be able to guarantee that the description has been added, if you can't then you can wrap the output in an <code>{% if branch.description %}</code>. Note the truncate filter that we've seen before. There's also a new filter here called <code>strip_tags</code>. Along with <code>strip_html</code> and <code>strip_links</code> it strips the description of any unwanted HTML tags and links.</p>
+
+<p>Not every theme will call for a <code>branch_small</code> partial to be used - some might just have the name of the branch and a link, whilst others might have the name, link and a map of the branches.</p>
+
+<h2>
+<a name="working-with-branch-maps" class="anchor" href="#working-with-branch-maps"><span class="octicon octicon-link"></span></a>Working with branch maps</h2>
+
+<p>Homeflow supports a variety of map types which you can extend with custom pins, overlays and so on. The first and easiest map to set-up is the Leafleft.js map type. To get this up and running on the branches index page, start by adding:</p>
+
+<pre><code>&lt;script&gt;
+    Ctesius.addConfig('branch_map_element', 'branch_map');
+    Ctesius.addConfig('branches', {% include_as_json branches/branches_list %});
+&lt;/script&gt;
+</code></pre>
+
+<p>This is the first time we've seen a built-in Ctesius <code>addConfig</code> function - the first <code>addConfig</code> assigns our branch map to the element <code>branch_map</code> whilst the second outputs a dump of JSON branch information for use on the front end. Next we need to declare our <code>div</code> to apply the map to:</p>
+
+<p><code>&lt;div id="branch_map"&gt;&lt;/div&gt;</code></p>
+
+<p>Don't forget to give your map ID or class and height and/or width to get it to show up. This should be enough to get your Leaflet branch map showing with a pin for each branch. The map bubbles have a fairly basic presentation that's fine for most, but if you would like to customise your pin, you can override <code>_branch_map_pin.liquid</code> in your <code>js_templates</code> folder and customise the layout and styles as necessary. Note that you'll need the basic layout code in the override, if you don't have this, pop us a line or grab it from another theme if we've given you access.</p>
+
+<p>If you would prefer a Google style map you still need the <code>addConfig branches</code> code seen before, but this time, instead of your <code>addConfig branch_map</code>, we need:</p>
+
+<p><code>{% gmap_for agency.branches as roadmap in branch_map %}</code></p>
+
+<p>This should then populate your <code>branch_map</code> div with a Google style map. Note that we're using the <code>agency.branches</code> <code>drop</code> to access the branches belonging to an agency.</p>
+
+<h2>
+<a name="branch-searching" class="anchor" href="#branch-searching"><span class="octicon octicon-link"></span></a>Branch searching</h2>
+
+<p>If you're building a portal or larger agency theme, you will pleased to know that users can search for your branches using our geo location database. This comes complete with a handy AJAX style auto suggest location based on the town or city the user enters. To get up and running, first we need to add our form:</p>
+
+<pre><code>&lt;form action="/branches" id="search" method="get"&gt; 
+    &lt;input type="text" name="location" id="location" class="autocomplete_location"&gt;
+    &lt;input type='hidden' name='place_id' value='{{place_id}}' class='autocomplete_location_result' /&gt;
+    &lt;button value="Search" type="submit"&gt;&lt;/button&gt;    
+&lt;/form&gt;
+</code></pre>
+
+<p>Next where you branch results need to be, we have:</p>
+
+<pre><code>{% if branches != empty %}
+    {% for branch in branches %}
+        {% include 'branches/branch_small' %}
+    {% endfor %}
+{% else %}
+    &lt;h1&gt;Sorry, no branches were found.&lt;/h1&gt;
+{% endif %}
+</code></pre>
+
+<p>The output here will be an index of branches, but if we submit our form with a location, our branches controller will go off, fetch the results and display them in place of the index results.</p>
+
+<h2>
+<a name="branch-titles-and-pagination" class="anchor" href="#branch-titles-and-pagination"><span class="octicon octicon-link"></span></a>Branch titles and pagination</h2>
+
+<p>Much like we saw earlier in teh Wiki with property results, it's useful to output some titles and especially useful to output pagination if the branch results are on several pages. There's a number of ways that you can deal with titles - here's one such example:</p>
+
+<pre><code>{% if location %}
+    {% if location.name != ''%}Branches in {{ location.name }}{% if county %}, {{county.name}}{% endif %}{% endif %}
+{% elsif county %}
+    Branches in {{ county.name }}
+{% elsif postcode %}
+    Branches in {{ postcode.postcode }}
+{% else %}
+    Branches Index
+{% endif %}
+</code></pre>
+
+<p>As you can see, the IF statement checks for the location or location type and outputs the appropriate heading between a heading tag. Remember that if you use the construct multiple times, you can add it to a partial if you wish.</p>
+
+<p>The branches index results comes loaded with the same pagination figures and options we saw in the property results earlier. Here's an example construct:</p>
+
+<pre><code>Page {{pagination.current_page}} of 
+{% if pagination.has_next_page %}
+    {{pagination.total_count}}
+{% else %}
+    {{pagination.current_page}}
+{% endif %}&lt;br&gt;     
+{% if pagination.has_prev_page %}
+    &lt;a href="{{pagination.previous_page_link}}"&gt;&amp;laquo; Previous page&lt;/a&gt;
+{% endif %}
+{% if pagination.has_prev_page and pagination.has_next_page %} 
+    - 
+{% endif %}
+{% if pagination.has_next_page %}
+    &lt;a href="{{pagination.next_page_link}}"&gt;Next page &amp;raquo;&lt;/a&gt;
+{% endif %}
+</code></pre>
+
+<p>This might output something like:</p>
+
+<pre><code>        Page 2 of 178
+« Previous page - Next page »
+</code></pre>
+
+<p>By running various IF checks, we can essentially figure out whether there's a next and/or previous page (for example) and format the output accordingly.</p>
+
+<h2>
+<a name="the-branch-show" class="anchor" href="#the-branch-show"><span class="octicon octicon-link"></span></a>The branch show</h2>
+
+<p>Wherever we have a Liquid tag that looks like <code>{{ branch | url_for_branch}}</code> or if the branch URL is called, the branch show page will get called into action. As with all of the subjects, the branch show page is simply titled <code>show.liquid</code> and lives in the branches folder.</p>
+
+<p>The branch show page supports many of the things we saw on the property show page - for instance, you could have a JavaScript based carousel showing branch photos, list the staff members belonging to a branch, output the branch description and so on. What information you fetch and how you display it will of course depend on your design, but let's run through the basics:</p>
+
+<p>To get the branch name we use the branch drop and name: <code>{{branch.name}}</code>. Moving on, we can then fetch the branch description:</p>
+
+<pre><code>{% if branch.description_with_agency_fallback %}
+    &lt;p&gt;
+        {{branch.description_with_agency_fallback | strip_html}}
+    &lt;/p&gt;
+{% endif %}
+</code></pre>
+
+<p>This nifty bit of code will try and get the branch description, but if it's empty, we'll get the agency description. Note that it is unlikely an agent will not have a description for their branch AND their agency, but it's always good practice to check. Notice also we're stripping the HTML as sometimes some links and other formatting gets added to the description which can wreak havoc on our layout.</p>
+
+<p>Staff profiles are a whole subject unto themselves which we will look at later in the Wiki but for now, if you wanted to display some mini profiles with links to full profiles, or just give you branch pages the human touch, you could use something like:</p>
+
+<pre><code>{% unless branch.staff_profiles.size == 0 %}
+    &lt;div class="sm_staff_gallery"&gt;
+        {% for staff_member in branch.staff_profiles limit:6 %}
+            {% if staff_member.avatar %}
+                &lt;a href="{{ staff_member | url_for_staff_member}}" title="{{staff_member.name}}"&gt;
+                    &lt;img src="{{ staff_member.avatar | url_for_staff_profile_avatar : "40x40" }}" title="{{staff_member.name}}"&gt;
+                &lt;/a&gt;
+            {% else %}
+                &lt;a href="{{ staff_member | url_for_staff_member}}" title="{{staff_member.name}}"&gt;
+                    &lt;img src="/liquid_assets/images/sp.jpg" height="40" width="40" title="{{staff_member.name}}"&gt;
+                &lt;/a&gt;
+            {% endif %}
+        {% endfor %}
+    &lt;/div&gt;
+{% endunless %}
+</code></pre>
+
+<p>Everything here should be reasonably familiar to you, though note we've added a <code>limit</code> to our for loop so that a maximum of six profiles are extracted. Also note that we're referencing a fallback image directly. Whilst this is a quirk of this code copied from a theme, sometimes you might need to reference an image using its relative path. On the whole though, you can just use Liquid and <code>theme_image_url</code>.</p>
+
+<h2>
+<a name="displaying-branch-properties" class="anchor" href="#displaying-branch-properties"><span class="octicon octicon-link"></span></a>Displaying branch properties</h2>
+
+<p>The branch properties page is one where we can thankfully reuse our property loops and pagination figures as seen on the property results. Alternatively we can make use of the tabbing facility and include a function that will return some recent sales or recent lettings. If you would like to get the full results and make use of pagination, we'll need to use the former of the two options as the properties method in the branches controller needs to run to return the results and pagination.</p>
+
+<p>Typically branch pages will make use of our built-in tabbing facility as seen earlier for property results. To get the tabs up and running, you will need the following code:</p>
+
+<pre><code>&lt;ul class="nav-menu nav-tabs"&gt;
+   &lt;li&gt;&lt;a href="#tabs/summary" id="tab_summary" class="selected"&gt;Summary&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="#tabs/team" id="tab_team"&gt;Meet our team&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="#tabs/sales" id="tab_sales"&gt;Our sales&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="#tabs/lettings" id="tab_lettings"&gt;Our lettings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>NB: the Ctesius app will take care of adding <code>selected active</code> classes to your tabs but you will need to style them.</p>
+
+<h3>
+<a name="recent-sales-and-lettings" class="anchor" href="#recent-sales-and-lettings"><span class="octicon octicon-link"></span></a>Recent sales and lettings</h3>
+
+<p>Now we have our tabs, we can add the area that will be toggled on a click. Here's what a togglable sales tab and recent branch sales function looks like:</p>
+
+<pre><code>{% if branch.recent_sales_properties != empty %}
+    &lt;script&gt;
+      {% assign properties = branch.recent_sales_properties %}
+      sales_property_for_config = {% include_as_json properties/properties_list %}.properties
+    &lt;/script&gt;
+    &lt;div id="togglable_sales" class="togglable_area clearfix hidden"&gt;
+        &lt;h2&gt;Latest sale listings for {{branch.name}}&lt;/h2&gt;   
+        {% for property in branch.recent_sales_properties limit: 20 %}
+          {% include "properties/property_small" %}
+        {% endfor %}
+    &lt;/div&gt;
+{% endif %}
+</code></pre>
+
+<p>Here we're making us of one of Ctesius's many built-in functions - this one gets recent properties that the branch has added or we have received via a feed. To get this up and running we literally call the function which returns the JSON we need. We then use the good ol' properties loop to output the results, whilst reusing our <code>property_small</code>. Note that we've wrapped this whole block in an IF statement that checks if the function returns empty. It would be good practice to hide the link to the tab if the function has no results too.</p>
+
+<p>To get this up and running for lettings, just substitute any reference to sales for lettings.</p>
+
+<h3>
+<a name="all-branch-properties" class="anchor" href="#all-branch-properties"><span class="octicon octicon-link"></span></a>All branch properties</h3>
+
+<p>If you would like to display all properties that belong to a branch with pagination, we'll need a <code>properties.liquid</code> file within the branches folder. Once you have this you can start to build up the layout. This will most likely be a hybrid of your properties result page and your branch show page so use partials where possible and reuse what you've already written. </p>
+
+<p>To start with, you might want to add a title:</p>
+
+<pre><code>&lt;h1&gt;{{agency.name}} - {{branch.name}} branch - All {{current_channel}}&lt;/h1&gt;
+</code></pre>
+
+<p>Not much new here but it's worth knowing that <code>{{current_channel}}</code> will return either a 'Sales' or 'Lettings' string. Next you might want some tabs that will enable the user to navigate around:</p>
+
+<pre><code>&lt;ul class="nav-menu nav-tabs"&gt;
+    &lt;li&gt;&lt;a href="{{branch | url_for_branch : branch.agency}}#tabs/summary" id="tab_summary"&gt;Summary&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tabs/team" id="tab_team"&gt;Meet our team&lt;/a&gt;&lt;/li&gt;
+    {% if branch.sales_branch_properties_count &gt; 0 %}
+        &lt;li&gt;&lt;a href="{{branch | url_for_branch : branch.agency}}/sales" id="sales"&gt;Our sales&lt;/a&gt;&lt;/li&gt;
+    {% endif %}
+    {% if branch.lettings_branch_properties_count &gt; 0 %}
+        &lt;li&gt;&lt;a href="{{branch | url_for_branch : branch.agency}}/lettings" id="lets"&gt;Our lettings&lt;/a&gt;&lt;/li&gt;
+    {% endif %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>The first two tabs here would be hidden tabs on the page that get selected and displayed on a click. The branch properties tabs however, need to go through the branch properties controller to get the results. All we need do here is specify the appropriate branch URL with <code>/sales</code> or <code>/lettings</code>. If you're developing a portal with agencies that have multiple branches, you will need to use <code>{{branch | url_for_branch : branch.agency}}</code> in your URL, else you can just use <code>{{branch | url_for_branch}}</code>.</p>
+
+<p>Next we need to output the actual results that are returned from our request. Thankfully this is just the same as outputting our property results seen earlier so you will have your pagination header, property loop, property small output and footer pagination (if required).</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/homeflow/homeflow_api/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/homeflow/homeflow_api/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/homeflow/homeflow_api"></a> is maintained by <a href="https://github.com/homeflow">homeflow</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
