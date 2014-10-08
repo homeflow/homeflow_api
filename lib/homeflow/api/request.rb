@@ -66,7 +66,10 @@ module Homeflow
 
 
     def constant_params
-      {:api_key=> Homeflow::API.config.api_key}
+      {
+        :api_key     => Homeflow::API.config.api_key,
+        :request_key => Homeflow::API.config.request_key
+      }
     end
 
     class << self
