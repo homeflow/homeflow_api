@@ -20,35 +20,6 @@ describe Homeflow::API::Response do
       expect {Homeflow::API::Response.new_from_json(error)}.to raise_error(Homeflow::API::Exceptions::InvalidResponse)
     end
 
-    it "should provide addressabe objects" do
-      file = File.read(File.dirname(__FILE__) + '/data/example_search_response.json')
-      response = Homeflow::API::Response.new_from_json(file)
-      expect(response.properties.first.display_address).to eq "a lovely fake display adddress"
-    end
-
-    it "should provide addressabe objects" do
-      file = File.read(File.dirname(__FILE__) + '/data/radar.json')
-      response = Homeflow::API::Response.new_from_json(file)
-      expect(response.portal.mobile_menu_items.first.type).to eq "mobile"
-
-
-      file = File.read(File.dirname(__FILE__) + '/data/whitton.json')
-      response = Homeflow::API::Response.new_from_json(file)
-
-      expect(response.agency.preferences.prefered_portal_id).to be nil
-    end
-
-    it "Calling a method that doesn't exists should return nil" do
-
-      file = File.read(File.dirname(__FILE__) + '/data/property_details.json')
-      response = Homeflow::API::Response.new_from_json(file)
-
-
-      expect(response.property.agency.branch.whatthe).to be nil
-      
-
-    end
-
 
     it "should correctly produce alturnative locations" do
       file = File.read(File.dirname(__FILE__) + '/data/with_alt_places.json')

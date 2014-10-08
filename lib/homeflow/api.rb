@@ -1,4 +1,4 @@
-require 'hashie'
+require 'hashie/mash'
 require 'json'
 require 'httparty'
 
@@ -39,6 +39,8 @@ require current_dir + "/api/response"
 
 module Homeflow
   module API
+
+    VERSION = "1.0.2"
 
     class << self
       attr_accessor :configuration

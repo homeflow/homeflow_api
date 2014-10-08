@@ -5,6 +5,7 @@ module Homeflow
 
     include HTTParty
 
+
     attr_accessor :resource_class, :request_specification
 
     def initialize(request_specification)
@@ -13,7 +14,7 @@ module Homeflow
 
     def perform
       begin
-        response = perform_request
+        response = body_of_request(perform_request)
       rescue Errno::ECONNREFUSED => e
         raise Homeflow::API::Exceptions::APIConnectionError, "Connection error. Homeflow might be down?"
       end
@@ -25,7 +26,7 @@ module Homeflow
       query_params = @request_specification.to_params.merge(constant_params)
       post_params = (@request_specification.respond_to?(:post_params) ? @request_specification.post_params : {})
       if Homeflow::API.config.show_debug && Homeflow::API.configuration.logger
-        log_line = []
+        log_line = [] 
         log_line << "Destination - #{url}"
         log_line << "Request params:\n#{query_params.to_json}\n"
         log_line << "Post params:\n#{post_params.to_json}\n"
@@ -76,10 +77,14 @@ module Homeflow
       def run_for(request_specification)
         r = Request.new(request_specification)
         r = r.perform
-        Response.new(r.parsed_response)
+        if r.is_a? Hash
+          Response.new(r)
+        else
+          Response.new_from_json(r)
+        end
       end
     end
-
+    
    end
   end
 end

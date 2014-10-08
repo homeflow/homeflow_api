@@ -7,7 +7,7 @@ group :development do
   gem "bundler"
 end
 
-gem "hashie", ">= 2"
+gem "hashie"
 gem "multi_json"
 gem "httparty"
 
