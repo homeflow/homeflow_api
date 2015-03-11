@@ -5,7 +5,7 @@ module Homeflow
 
     def self.new_from_json(json)
       begin
-       hash = MultiJson.load(json) 
+       hash = MultiJson.load(json)
       rescue MultiJson::LoadError
         raise Homeflow::API::Exceptions::InvalidResponse
       end
@@ -26,6 +26,8 @@ module Homeflow
       "agency" => Homeflow::API::Agency,
       "agencies" => Homeflow::API::Agency,
       "locations" => Homeflow::API::Location,
+      "node" => Homeflow::API::Node,
+      "nodes" => Homeflow::API::Node,
       "counties" => Homeflow::API::County,
       "branch" => Homeflow::API::Branch,
       "branches" => Homeflow::API::Branch,
@@ -45,7 +47,7 @@ module Homeflow
         "counties" => Homeflow::API::County
       },
       "favourite_properties" => Homeflow::API::FavouriteProperty
-    } 
+    }
 
     def initialize(hash)
       @built_result_objects = {}
@@ -104,7 +106,7 @@ module Homeflow
       return result
     end
 
-     
+
    end
  end
 end
