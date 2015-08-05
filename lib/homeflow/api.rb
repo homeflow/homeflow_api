@@ -36,6 +36,7 @@ require current_dir + '/api/node'
 require current_dir + '/api/message'
 require current_dir + "/api/favourite_property"
 require current_dir + "/api/response"
+require current_dir + "/api/geo_feature"
 
 
 module Homeflow
