@@ -24,7 +24,6 @@ module Homeflow
       "county" => Homeflow::API::County,
       "location" => Homeflow::API::Location,
       "agency" => Homeflow::API::Agency,
-      "article" => Homeflow::API::Article,
       "agencies" => Homeflow::API::Agency,
       "locations" => Homeflow::API::Location,
       "node" => Homeflow::API::Node,
@@ -47,7 +46,8 @@ module Homeflow
         "locations" => Homeflow::API::Location,
         "counties" => Homeflow::API::County
       },
-      "favourite_properties" => Homeflow::API::FavouriteProperty
+      "favourite_properties" => Homeflow::API::FavouriteProperty,
+      "article" => Homeflow::API::Article
     }
 
     def initialize(hash)
