@@ -37,12 +37,12 @@ require current_dir + '/api/message'
 require current_dir + "/api/favourite_property"
 require current_dir + "/api/response"
 require current_dir + "/api/geo_feature"
-
+require current_dir + "/api/article"
 
 module Homeflow
   module API
 
-    VERSION = "1.0.6"
+    VERSION = "1.0.7"
 
     class << self
       attr_accessor :configuration
