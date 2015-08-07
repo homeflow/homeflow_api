@@ -25,6 +25,8 @@ module Homeflow
       "location" => Homeflow::API::Location,
       "agency" => Homeflow::API::Agency,
       "agencies" => Homeflow::API::Agency,
+      "article" => Homeflow::API::Article,
+      "articles" => Homeflow::API::Article,
       "locations" => Homeflow::API::Location,
       "node" => Homeflow::API::Node,
       "nodes" => Homeflow::API::Node,
