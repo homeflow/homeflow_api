@@ -27,6 +27,8 @@ module Homeflow
       "agencies" => Homeflow::API::Agency,
       "article" => Homeflow::API::Article,
       "articles" => Homeflow::API::Article,
+      "geo_feature" => Homeflow::API::GeoFeature,
+      "geo_features" => Homeflow::API::GeoFeature,
       "locations" => Homeflow::API::Location,
       "node" => Homeflow::API::Node,
       "nodes" => Homeflow::API::Node,
