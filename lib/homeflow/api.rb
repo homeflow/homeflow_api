@@ -16,6 +16,7 @@ require current_dir + "/api/delete"
 require current_dir + "/api/query"
 require current_dir + "/api/exceptions"
 
+require current_dir + "/api/article"
 require current_dir + "/api/search"
 require current_dir + "/api/property"
 require current_dir + "/api/county"
@@ -37,7 +38,6 @@ require current_dir + '/api/message'
 require current_dir + "/api/favourite_property"
 require current_dir + "/api/response"
 require current_dir + "/api/geo_feature"
-require current_dir + "/api/article"
 
 module Homeflow
   module API
