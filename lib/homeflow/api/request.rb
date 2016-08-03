@@ -26,7 +26,7 @@ module Homeflow
       query_params = @request_specification.to_params.merge(constant_params)
       post_params = (@request_specification.respond_to?(:post_params) ? @request_specification.post_params : {})
       if Homeflow::API.config.show_debug && Homeflow::API.configuration.logger
-        log_line = [] 
+        log_line = []
         log_line << "Destination - #{url}"
         log_line << "Request params:\n#{query_params.to_json}\n"
         log_line << "Post params:\n#{post_params.to_json}\n"
@@ -51,6 +51,9 @@ module Homeflow
     def normalised_base_url
       source = Homeflow::API.config.source.gsub(/.\/$/,'')
       if request_specification.is_a? Query
+        if request_specification.resource_class.resource_uri == 'site_content_chunks'
+          source = Homeflow::API.config.source_athena.gsub(/.\/$/,'')
+        end
         return "#{source}/#{request_specification.resource_class.resource_uri}"
       else
         return "#{source}/#{request_specification.resource_uri}"
@@ -84,7 +87,7 @@ module Homeflow
         end
       end
     end
-    
+
    end
   end
 end
