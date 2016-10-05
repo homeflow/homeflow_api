@@ -72,7 +72,7 @@ module Homeflow
         @request_key = ''
         @api_key = 'API_KEY_REQUIRED'
         @source = 'http://localhost:3000'
-        @source_athena = 'http://localhost:3000'
+        @source_athena = ''
         @show_debug = false
         @logger = nil
       end
