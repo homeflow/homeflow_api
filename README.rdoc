@@ -5,11 +5,12 @@ The homeflow_api gem provides homeflow api v2 functions from ruby. This is alpha
 == Install
 
 gem 'dry_ice', '0.1.1'
+
 gem 'homeflow_api', :git => 'git://github.com/homeflow/homeflow_api.git'
 
 == Initializer
 
-Pop this in /config/initializers/homeflow.rb. Replace XXXXX for your API key. 
+Pop this in /config/initializers/homeflow.rb. Replace XXXXX for your API key.
 
 require 'homeflow/api'
 require 'dry_ice'
