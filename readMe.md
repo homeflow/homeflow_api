@@ -1,14 +1,14 @@
-= homeflow_api
+## homeflow_api
 
 The homeflow_api gem provides homeflow api v2 functions from ruby. This is alpha quality software and is in active development.
 
-== Install
+### Install
 
 gem 'dry_ice', '0.1.1'
 
 gem 'homeflow_api', :git => 'git://github.com/homeflow/homeflow_api.git'
 
-== Initializer
+### Initializer
 
 Pop this in /config/initializers/homeflow.rb. Replace XXXXX for your API key.
 
@@ -33,7 +33,7 @@ end
 
 ```
 
-== Contributing to homeflow_api
+### Contributing to homeflow_api
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -43,7 +43,7 @@ end
 * Make sure to add tests for it. This is important so we don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or it is otherwise necessary, that is fine, but please isolate to its own commit so we can cherry-pick around it.
 
-== Copyright
+### Copyright
 
 Copyright (c) 2011 Homeflow. See LICENSE.txt for
 further details.
