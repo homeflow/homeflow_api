@@ -63,8 +63,8 @@ module Homeflow
     end
 
     def _source(source_id)
-      return nil unless Homeflow::API.config.call("source_#{source_id}") != ''
-      Homeflow::API.config.call("source_#{source_id}").gsub(/.\/$/,'')
+      return nil unless Homeflow::API.config.send("source_#{source_id}") != ''
+      Homeflow::API.config.send("source_#{source_id}").gsub(/.\/$/,'')
     end
 
     def source_athena
