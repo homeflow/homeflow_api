@@ -51,13 +51,32 @@ module Homeflow
     def normalised_base_url
       source = Homeflow::API.config.source.gsub(/.\/$/,'')
       if request_specification.is_a? Query
-        if Homeflow::API.config.source_athena != '' && request_specification.resource_class.resource_uri == 'site_content_chunks'
-          source = Homeflow::API.config.source_athena.gsub(/.\/$/,'')
+        if source_athena && is_resource?('site_content_chunks')
+          source = source_athena
+        elsif source_properties && is_resource?('properties')
+          source = source_properties
         end
         return "#{source}/#{request_specification.resource_class.resource_uri}"
       else
         return "#{source}/#{request_specification.resource_uri}"
       end
+    end
+
+    def _source(source_id)
+      return nil unless Homeflow::API.config.call("source_#{source_id}") != ''
+      Homeflow::API.config.call("source_#{source_id}").gsub(/.\/$/,'')
+    end
+
+    def source_athena
+      _source('athena')
+    end
+
+    def source_properties
+      _source('properties')
+    end
+
+    def is_resource?(resource_id)
+      request_specification.resource_class.resource_uri == resource_id
     end
 
     def body_of_request(request)
