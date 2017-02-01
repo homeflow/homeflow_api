@@ -67,7 +67,7 @@ module Homeflow
 
     # A configuration instance
     class Configuration
-      attr_accessor :api_key, :source, :source_athena, :show_debug, :logger, :request_key
+      attr_accessor :api_key, :source, :source_athena, :source_properties, :show_debug, :logger, :request_key
 
       def initialize
         @request_key = ''
