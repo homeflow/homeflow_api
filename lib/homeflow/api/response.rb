@@ -33,6 +33,8 @@ module Homeflow
       "geo_features" => Homeflow::API::GeoFeature,
       "local_business_datum" => Homeflow::API::LocalBusinessDatum,
       "local_business_data" => Homeflow::API::LocalBusinessDatum,
+      "agency_local_business_datum" => Homeflow::API::LocalBusinessDatum,
+      "agency_local_business_data" => Homeflow::API::LocalBusinessDatum,
       "locations" => Homeflow::API::Location,
       "node" => Homeflow::API::Node,
       "nodes" => Homeflow::API::Node,
