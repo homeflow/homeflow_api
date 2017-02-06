@@ -55,7 +55,7 @@ module Homeflow
           source = source_athena
         elsif source_properties && is_resource?('properties')
           source = source_properties
-        elsif source_places && is_resource?('places')
+        elsif source_places && is_place_based_resource?
           source = source_places
         end
         return "#{source}/#{request_specification.resource_class.resource_uri}"
@@ -79,6 +79,10 @@ module Homeflow
 
     def source_properties
       _source('properties')
+    end
+
+    def is_place_based_resource?
+      is_resource?('places') || is_resource?('locations') || is_resource?('postcodes') || is_resource?('counties')
     end
 
     def is_resource?(resource_id)
