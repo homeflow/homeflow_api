@@ -55,6 +55,8 @@ module Homeflow
           source = source_athena
         elsif source_properties && is_resource?('properties')
           source = source_properties
+        elsif source_places && is_resource?('places')
+          source = source_places
         end
         return "#{source}/#{request_specification.resource_class.resource_uri}"
       else
@@ -63,12 +65,16 @@ module Homeflow
     end
 
     def _source(source_id)
-      return nil unless Homeflow::API.config.send("source_#{source_id}") != ''
+      return nil if Homeflow::API.config.send("source_#{source_id}").blank?
       Homeflow::API.config.send("source_#{source_id}").gsub(/.\/$/,'')
     end
 
     def source_athena
       _source('athena')
+    end
+
+    def source_places
+      _source('places')
     end
 
     def source_properties
