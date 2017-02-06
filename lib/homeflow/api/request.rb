@@ -60,6 +60,9 @@ module Homeflow
         end
         return "#{source}/#{request_specification.resource_class.resource_uri}"
       else
+        if source_places && is_place_based_resource?
+          source = source_places
+        end
         return "#{source}/#{request_specification.resource_uri}"
       end
     end
