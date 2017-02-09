@@ -62,6 +62,8 @@ module Homeflow
       else
         if source_places && ["locations", "postcodes", "places", "counties"].map{|i| request_specification.resource_uri.include?(i)}.include?(true)
           source = source_places
+        elsif source_properties && is_resource?('properties')
+          source = source_properties
         end
         return "#{source}/#{request_specification.resource_uri}"
       end
