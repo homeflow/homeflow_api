@@ -7,7 +7,7 @@ group :development do
   gem "bundler"
 end
 
-gem "hashie"
+gem "hashie" , "3.4.3"  # 3.5.1 has very poor performance - MJE 07/02/2017
 gem "multi_json"
 gem "httparty"
 
