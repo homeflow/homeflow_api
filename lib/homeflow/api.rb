@@ -23,6 +23,7 @@ require current_dir + "/api/agency_local_business_datum"
 require current_dir + "/api/search"
 require current_dir + "/api/property"
 require current_dir + "/api/county"
+require current_dir + "/api/country"
 require current_dir + "/api/location"
 require current_dir + "/api/place"
 require current_dir + "/api/site_content_chunk"
@@ -44,7 +45,7 @@ require current_dir + "/api/response"
 module Homeflow
   module API
 
-    VERSION = "1.1.0"
+    VERSION = "1.1.1"
 
     class << self
       attr_accessor :configuration
