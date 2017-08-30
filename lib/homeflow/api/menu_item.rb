@@ -1,6 +1,6 @@
 module Homeflow
   module API
-    class MenuItme < Resource
+    class MenuItem < Resource
 
       is_resource :menu_items
 
