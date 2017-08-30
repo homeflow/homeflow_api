@@ -38,6 +38,8 @@ module Homeflow
       "locations" => Homeflow::API::Location,
       "node" => Homeflow::API::Node,
       "nodes" => Homeflow::API::Node,
+      "menu_item" => Homeflow::API::MenuItem,
+      "menu_items" => Homeflow::API::MenuItem,
       "counties" => Homeflow::API::County,
       "branch" => Homeflow::API::Branch,
       "branches" => Homeflow::API::Branch,
