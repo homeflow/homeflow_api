@@ -22,6 +22,8 @@ module Homeflow
       "search" => Homeflow::API::Search,
       "property" => Homeflow::API::Property,
       "county" => Homeflow::API::County,
+      "country" => Homeflow::API::Country,
+      "countries" => Homeflow::API::Country,
       "location" => Homeflow::API::Location,
       "agency" => Homeflow::API::Agency,
       "agencies" => Homeflow::API::Agency,
