@@ -46,8 +46,6 @@ require current_dir + "/api/response"
 module Homeflow
   module API
 
-    VERSION = "1.3.0"
-
     class << self
       attr_accessor :configuration
     end
