@@ -61,6 +61,7 @@ module Homeflow
         "counties" => Homeflow::API::County
       },
       "favourite_properties" => Homeflow::API::FavouriteProperty
+      "agency_employees" => Homeflow::API::AgencyEmployee
     }
 
     def initialize(hash)
