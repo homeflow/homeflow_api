@@ -60,7 +60,7 @@ module Homeflow
         "locations" => Homeflow::API::Location,
         "counties" => Homeflow::API::County
       },
-      "favourite_properties" => Homeflow::API::FavouriteProperty
+      "favourite_properties" => Homeflow::API::FavouriteProperty,
       "agency_employees" => Homeflow::API::AgencyEmployee
     }
 
