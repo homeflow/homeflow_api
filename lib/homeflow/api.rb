@@ -15,6 +15,7 @@ require current_dir + "/api/put"
 require current_dir + "/api/delete"
 require current_dir + "/api/query"
 require current_dir + "/api/exceptions"
+require current_dir + "/api/agency_employee"
 require current_dir + "/api/article"
 require current_dir + "/api/testimonial"
 require current_dir + "/api/geo_feature"
@@ -47,7 +48,7 @@ require current_dir + "/api/rda_agency_preference"
 module Homeflow
   module API
 
-    VERSION = "1.3.1"
+    VERSION = "1.4.1"
 
     class << self
       attr_accessor :configuration
