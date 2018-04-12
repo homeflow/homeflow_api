@@ -42,12 +42,13 @@ require current_dir + '/api/site_page'
 require current_dir + '/api/node'
 require current_dir + '/api/message'
 require current_dir + "/api/favourite_property"
+require current_dir + "/api/rda_agency_preference"
 require current_dir + "/api/response"
 
 module Homeflow
   module API
 
-    VERSION = "1.4.0"
+    VERSION = "1.4.1"
 
     class << self
       attr_accessor :configuration
