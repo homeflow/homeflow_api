@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency 'hashie' ,    '3.4.3'     # Version after 3.4.3 have very poor performance MJE
-  s.add_dependency 'multi_json', '1.11.2'
+  s.add_dependency 'multi_json', '1.12.2'
   s.add_dependency 'httparty'
   s.add_dependency 'bundler'
 
