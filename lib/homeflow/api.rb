@@ -15,6 +15,7 @@ require current_dir + "/api/put"
 require current_dir + "/api/delete"
 require current_dir + "/api/query"
 require current_dir + "/api/exceptions"
+require current_dir + "/api/agency_employee"
 require current_dir + "/api/article"
 require current_dir + "/api/testimonial"
 require current_dir + "/api/geo_feature"
@@ -41,6 +42,7 @@ require current_dir + '/api/site_page'
 require current_dir + '/api/node'
 require current_dir + '/api/message'
 require current_dir + "/api/favourite_property"
+require current_dir + "/api/rda_agency_preference"
 require current_dir + "/api/response"
 
 module Homeflow
