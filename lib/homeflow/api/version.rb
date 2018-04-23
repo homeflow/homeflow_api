@@ -1,7 +1,7 @@
 module Homeflow
   module Api
     module Version
-      VERSION = "1.3.0"
+      VERSION = "1.4.2"
     end
   end
 end
