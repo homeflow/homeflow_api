@@ -43,8 +43,8 @@ require current_dir + '/api/node'
 require current_dir + '/api/message'
 require current_dir + "/api/favourite_property"
 require current_dir + "/api/rda_agency_preference"
-require current_dir + "/api/response"
 require current_dir + "/api/rda_user_preference"
+require current_dir + "/api/response" # THIS MUST ALWAYS BE LAST IN THE LIST
 
 module Homeflow
   module API
