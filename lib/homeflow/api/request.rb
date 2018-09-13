@@ -16,7 +16,7 @@ module Homeflow
       begin
         response = body_of_request(perform_request)
       rescue Errno::ECONNREFUSED => e
-        raise Homeflow::API::Exceptions::APIConnectionError, "Connection error. Homeflow might be down?"
+        raise Homeflow::API::Exceptions::APIConnectionError, "Homeflow might be down? Connection error: #{e}"
       end
       response
     end
