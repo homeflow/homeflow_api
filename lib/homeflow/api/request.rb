@@ -49,7 +49,7 @@ module Homeflow
     end
 
     def normalised_base_url
-      source = Homeflow::API.config.source.gsub(/.\/$/,'')
+      source = Homeflow::API.config.source.chomp('/')
       if request_specification.is_a? Query
         if source_athena && is_resource?('site_content_chunks')
           source = source_athena
@@ -71,7 +71,7 @@ module Homeflow
 
     def _source(source_id)
       return nil if Homeflow::API.config.send("source_#{source_id}").blank?
-      Homeflow::API.config.send("source_#{source_id}").gsub(/.\/$/,'')
+      Homeflow::API.config.send("source_#{source_id}").chomp('/')
     end
 
     def source_athena
