@@ -45,6 +45,7 @@ require current_dir + "/api/favourite_property"
 require current_dir + "/api/rda_agency_preference"
 require current_dir + "/api/rda_user_preference"
 require current_dir + "/api/agency_marketing_channel"
+require current_dir + "/api/site_widget"
 require current_dir + "/api/response" # THIS MUST ALWAYS BE LAST IN THE LIST
 
 module Homeflow
